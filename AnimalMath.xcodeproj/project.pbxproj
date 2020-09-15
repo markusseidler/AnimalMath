@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C42510EF2800C13B1E /* AppDelegate.swift */; };
+		281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C62510EF2800C13B1E /* SceneDelegate.swift */; };
+		281C00C92510EF2800C13B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C82510EF2800C13B1E /* ContentView.swift */; };
+		281C00CB2510EF2900C13B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CA2510EF2900C13B1E /* Assets.xcassets */; };
+		281C00CE2510EF2900C13B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CD2510EF2900C13B1E /* Preview Assets.xcassets */; };
+		281C00D12510EF2900C13B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */; };
+		281C00DC2510EF2900C13B1E /* AnimalMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */; };
+		281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		281C00D82510EF2900C13B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 281C00B92510EF2800C13B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 281C00C02510EF2800C13B1E;
+			remoteInfo = AnimalMath;
+		};
+		281C00E32510EF2900C13B1E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 281C00B92510EF2800C13B1E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 281C00C02510EF2800C13B1E;
+			remoteInfo = AnimalMath;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		281C00C12510EF2800C13B1E /* AnimalMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		281C00C42510EF2800C13B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		281C00C62510EF2800C13B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		281C00C82510EF2800C13B1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		281C00CA2510EF2900C13B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		281C00CD2510EF2900C13B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		281C00D02510EF2900C13B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		281C00D22510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		281C00D72510EF2900C13B1E /* AnimalMathTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalMathTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMathTests.swift; sourceTree = "<group>"; };
+		281C00DD2510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		281C00E22510EF2900C13B1E /* AnimalMathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalMathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMathUITests.swift; sourceTree = "<group>"; };
+		281C00E82510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		281C00BE2510EF2800C13B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00D42510EF2900C13B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00DF2510EF2900C13B1E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		281C00B82510EF2800C13B1E = {
+			isa = PBXGroup;
+			children = (
+				281C00C32510EF2800C13B1E /* AnimalMath */,
+				281C00DA2510EF2900C13B1E /* AnimalMathTests */,
+				281C00E52510EF2900C13B1E /* AnimalMathUITests */,
+				281C00C22510EF2800C13B1E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		281C00C22510EF2800C13B1E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				281C00C12510EF2800C13B1E /* AnimalMath.app */,
+				281C00D72510EF2900C13B1E /* AnimalMathTests.xctest */,
+				281C00E22510EF2900C13B1E /* AnimalMathUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		281C00C32510EF2800C13B1E /* AnimalMath */ = {
+			isa = PBXGroup;
+			children = (
+				281C00C42510EF2800C13B1E /* AppDelegate.swift */,
+				281C00C62510EF2800C13B1E /* SceneDelegate.swift */,
+				281C00C82510EF2800C13B1E /* ContentView.swift */,
+				281C00CA2510EF2900C13B1E /* Assets.xcassets */,
+				281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */,
+				281C00D22510EF2900C13B1E /* Info.plist */,
+				281C00CC2510EF2900C13B1E /* Preview Content */,
+			);
+			path = AnimalMath;
+			sourceTree = "<group>";
+		};
+		281C00CC2510EF2900C13B1E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				281C00CD2510EF2900C13B1E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		281C00DA2510EF2900C13B1E /* AnimalMathTests */ = {
+			isa = PBXGroup;
+			children = (
+				281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */,
+				281C00DD2510EF2900C13B1E /* Info.plist */,
+			);
+			path = AnimalMathTests;
+			sourceTree = "<group>";
+		};
+		281C00E52510EF2900C13B1E /* AnimalMathUITests */ = {
+			isa = PBXGroup;
+			children = (
+				281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */,
+				281C00E82510EF2900C13B1E /* Info.plist */,
+			);
+			path = AnimalMathUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		281C00C02510EF2800C13B1E /* AnimalMath */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 281C00EB2510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMath" */;
+			buildPhases = (
+				281C00BD2510EF2800C13B1E /* Sources */,
+				281C00BE2510EF2800C13B1E /* Frameworks */,
+				281C00BF2510EF2800C13B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimalMath;
+			productName = AnimalMath;
+			productReference = 281C00C12510EF2800C13B1E /* AnimalMath.app */;
+			productType = "com.apple.product-type.application";
+		};
+		281C00D62510EF2900C13B1E /* AnimalMathTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 281C00EE2510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMathTests" */;
+			buildPhases = (
+				281C00D32510EF2900C13B1E /* Sources */,
+				281C00D42510EF2900C13B1E /* Frameworks */,
+				281C00D52510EF2900C13B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				281C00D92510EF2900C13B1E /* PBXTargetDependency */,
+			);
+			name = AnimalMathTests;
+			productName = AnimalMathTests;
+			productReference = 281C00D72510EF2900C13B1E /* AnimalMathTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		281C00E12510EF2900C13B1E /* AnimalMathUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 281C00F12510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMathUITests" */;
+			buildPhases = (
+				281C00DE2510EF2900C13B1E /* Sources */,
+				281C00DF2510EF2900C13B1E /* Frameworks */,
+				281C00E02510EF2900C13B1E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				281C00E42510EF2900C13B1E /* PBXTargetDependency */,
+			);
+			name = AnimalMathUITests;
+			productName = AnimalMathUITests;
+			productReference = 281C00E22510EF2900C13B1E /* AnimalMathUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		281C00B92510EF2800C13B1E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1170;
+				LastUpgradeCheck = 1170;
+				ORGANIZATIONNAME = Mata;
+				TargetAttributes = {
+					281C00C02510EF2800C13B1E = {
+						CreatedOnToolsVersion = 11.7;
+					};
+					281C00D62510EF2900C13B1E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 281C00C02510EF2800C13B1E;
+					};
+					281C00E12510EF2900C13B1E = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 281C00C02510EF2800C13B1E;
+					};
+				};
+			};
+			buildConfigurationList = 281C00BC2510EF2800C13B1E /* Build configuration list for PBXProject "AnimalMath" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 281C00B82510EF2800C13B1E;
+			productRefGroup = 281C00C22510EF2800C13B1E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				281C00C02510EF2800C13B1E /* AnimalMath */,
+				281C00D62510EF2900C13B1E /* AnimalMathTests */,
+				281C00E12510EF2900C13B1E /* AnimalMathUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		281C00BF2510EF2800C13B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C00D12510EF2900C13B1E /* LaunchScreen.storyboard in Resources */,
+				281C00CE2510EF2900C13B1E /* Preview Assets.xcassets in Resources */,
+				281C00CB2510EF2900C13B1E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00D52510EF2900C13B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00E02510EF2900C13B1E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		281C00BD2510EF2800C13B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */,
+				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
+				281C00C92510EF2800C13B1E /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00D32510EF2900C13B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C00DC2510EF2900C13B1E /* AnimalMathTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		281C00DE2510EF2900C13B1E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		281C00D92510EF2900C13B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 281C00C02510EF2800C13B1E /* AnimalMath */;
+			targetProxy = 281C00D82510EF2900C13B1E /* PBXContainerItemProxy */;
+		};
+		281C00E42510EF2900C13B1E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 281C00C02510EF2800C13B1E /* AnimalMath */;
+			targetProxy = 281C00E32510EF2900C13B1E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				281C00D02510EF2900C13B1E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		281C00E92510EF2900C13B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		281C00EA2510EF2900C13B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		281C00EC2510EF2900C13B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalMath/Preview Content\"";
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AnimalMath/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		281C00ED2510EF2900C13B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"AnimalMath/Preview Content\"";
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = AnimalMath/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMath;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		281C00EF2510EF2900C13B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				INFOPLIST_FILE = AnimalMathTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalMath.app/AnimalMath";
+			};
+			name = Debug;
+		};
+		281C00F02510EF2900C13B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				INFOPLIST_FILE = AnimalMathTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMathTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AnimalMath.app/AnimalMath";
+			};
+			name = Release;
+		};
+		281C00F22510EF2900C13B1E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				INFOPLIST_FILE = AnimalMathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalMath;
+			};
+			name = Debug;
+		};
+		281C00F32510EF2900C13B1E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R3RPTJX8C6;
+				INFOPLIST_FILE = AnimalMathUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mata.AnimalMathUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AnimalMath;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		281C00BC2510EF2800C13B1E /* Build configuration list for PBXProject "AnimalMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				281C00E92510EF2900C13B1E /* Debug */,
+				281C00EA2510EF2900C13B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		281C00EB2510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMath" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				281C00EC2510EF2900C13B1E /* Debug */,
+				281C00ED2510EF2900C13B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		281C00EE2510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMathTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				281C00EF2510EF2900C13B1E /* Debug */,
+				281C00F02510EF2900C13B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		281C00F12510EF2900C13B1E /* Build configuration list for PBXNativeTarget "AnimalMathUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				281C00F22510EF2900C13B1E /* Debug */,
+				281C00F32510EF2900C13B1E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 281C00B92510EF2800C13B1E /* Project object */;
+}
