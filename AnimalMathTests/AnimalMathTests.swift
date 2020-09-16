@@ -15,6 +15,8 @@ class AnimalMathTests: XCTestCase {
     var sutAddition: CalculationTable?
     let numberOfQuestions: NumberOfQuestionsSet = .five
     let highestNumber = 10
+    var multiplicationResultArray = [Double]()
+    var additionResultArray = [Double]()
 //    let leftSide = [Int](1...10).shuffled()
 //    let rightSide = [Int](1...10).shuffled()
     
@@ -58,11 +60,13 @@ class AnimalMathTests: XCTestCase {
         XCTAssertTrue((sutMultiplication?.rightSideNumbers.max())! <= Double(highestNumber))
     }
     
-//    func testCalculation() {
-//        sutMultiplication?.leftSideNumbers = leftSide
-//        sutMultiplication?.rightSideNumbers = rightSide
-//        XCTAssertEqual(sutMultiplication?.calculationResults, zip(leftSide, rightSide).map() {$0 * $1})
-//    }
+    func testCalculations() {
+        multiplicationResultArray = zip(sutMultiplication!.leftSideNumbers, sutMultiplication!.rightSideNumbers).map() {$0 * $1}
+        XCTAssertEqual(sutMultiplication?.calculationResults, multiplicationResultArray)
+        
+        additionResultArray = zip(sutAddition!.leftSideNumbers, sutAddition!.rightSideNumbers).map() {$0 + $1}
+        XCTAssertEqual(sutAddition?.calculationResults, additionResultArray)
+    }
     
 
 
