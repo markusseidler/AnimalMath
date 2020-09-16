@@ -15,6 +15,9 @@
 		281C00D12510EF2900C13B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */; };
 		281C00DC2510EF2900C13B1E /* AnimalMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */; };
 		281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */; };
+		28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B582511D0FA00E96553 /* CalculationTable.swift */; };
+		28D80B5B2511D66D00E96553 /* MultiplicationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B5A2511D66D00E96553 /* MultiplicationGame.swift */; };
+		28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		281C00E22510EF2900C13B1E /* AnimalMathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalMathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMathUITests.swift; sourceTree = "<group>"; };
 		281C00E82510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28D80B582511D0FA00E96553 /* CalculationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTable.swift; sourceTree = "<group>"; };
+		28D80B5A2511D66D00E96553 /* MultiplicationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationGame.swift; sourceTree = "<group>"; };
+		28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionsSet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +105,11 @@
 		281C00C32510EF2800C13B1E /* AnimalMath */ = {
 			isa = PBXGroup;
 			children = (
+				281C00F42510F09600C13B1E /* Model */,
+				281C00F52510F0C300C13B1E /* ViewModel */,
+				281C00F62510F0CB00C13B1E /* View */,
 				281C00C42510EF2800C13B1E /* AppDelegate.swift */,
 				281C00C62510EF2800C13B1E /* SceneDelegate.swift */,
-				281C00C82510EF2800C13B1E /* ContentView.swift */,
 				281C00CA2510EF2900C13B1E /* Assets.xcassets */,
 				281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */,
 				281C00D22510EF2900C13B1E /* Info.plist */,
@@ -134,6 +142,31 @@
 				281C00E82510EF2900C13B1E /* Info.plist */,
 			);
 			path = AnimalMathUITests;
+			sourceTree = "<group>";
+		};
+		281C00F42510F09600C13B1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				28D80B582511D0FA00E96553 /* CalculationTable.swift */,
+				28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		281C00F52510F0C300C13B1E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				28D80B5A2511D66D00E96553 /* MultiplicationGame.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		281C00F62510F0CB00C13B1E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				281C00C82510EF2800C13B1E /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,7 +300,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */,
+				28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */,
 				281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */,
+				28D80B5B2511D66D00E96553 /* MultiplicationGame.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
 				281C00C92510EF2800C13B1E /* ContentView.swift in Sources */,
 			);
