@@ -3,4 +3,70 @@
    uuid = "C032069B-4457-4374-B66B-24224AE4D364"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/Model/CalculationTable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "displayItemTapped(of:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D - b5e19e0635904531"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimalMath.CalculationTable.displayItemTapped(of: A) -&gt; ()"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "261">
+               </Location>
+               <Location
+                  uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D - 482c282ab38e7c0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AnimalMath.DisplayItem&lt;A&gt;) -&gt; Swift.Bool in AnimalMath.CalculationTable.displayItemTapped(of: A) -&gt; ()"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A390229D-369C-43AD-9458-94894B94C0C7"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/Model/CalculationTable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "displayItemTapped(of:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

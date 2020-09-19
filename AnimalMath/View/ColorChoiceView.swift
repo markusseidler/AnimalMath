@@ -21,7 +21,7 @@ struct ColorChoiceView: View {
     }
     
     // View constants
-    let circleSize: CGFloat = 30
+    let circleSize: CGFloat = 40
     let lineWidthWhenTapped: CGFloat = 4
 }
 

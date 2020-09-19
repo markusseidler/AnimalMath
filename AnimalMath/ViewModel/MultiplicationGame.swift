@@ -15,11 +15,25 @@ class MultiplicationGame: ObservableObject {
         multiplicationTable.colorArray
     }
     
-    // MARK: - Private Properties
-    @Published private var multiplicationTable: CalculationTable = MultiplicationGame.createMultiplicationTable()
+    var selectedColor: FavoriteColor? {
+        multiplicationTable.colorSelected
+    }
     
-    private static func createMultiplicationTable() -> CalculationTable {
-        return CalculationTable(numberOfQuestionsEnum: .five, highestNumber: 5) { left, right in
+    var animalArray: [DisplayItem<String>] {
+        multiplicationTable.displayItems
+    }
+    
+    var animalSelected: DisplayItem<String>? {
+        multiplicationTable.displayItemSelected
+    }
+    
+    static let animalNames: [String] = ["cow", "elephant", "chick", "panda", "pig"]
+    
+    // MARK: - Private Properties
+    @Published private var multiplicationTable: CalculationTable<String> = MultiplicationGame.createMultiplicationTable()
+    
+    private static func createMultiplicationTable() -> CalculationTable<String> {
+        return CalculationTable(numberOfQuestionsEnum: .five, highestNumber: 5, displayContentArray: animalNames) { left, right in
             left * right
         }
     }
@@ -29,6 +43,10 @@ class MultiplicationGame: ObservableObject {
     
     func colorSelected(color: FavoriteColor) {
         multiplicationTable.colorTapped(color: color)
+    }
+    
+    func animalSelected(animalName: String) {
+        multiplicationTable.displayItemTapped(of: animalName)
     }
     
 }

@@ -12,45 +12,69 @@ import SwiftUI
 
 struct StartView: View {
     
-  @ObservedObject var game = MultiplicationGame()
+    @ObservedObject var game = MultiplicationGame()
+    
+    var themeColor: Color {
+        game.selectedColor?.color ?? Color.offwhite
+    }
+    
+//    var fontColor: Color {
+//        game.selectedColor?.color ?? Color.black
+//    }
+    
     
     var body: some View {
         
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [.white, .offwhite]), startPoint: .topLeading, endPoint: .bottomTrailing)
-            
-            VStack {
-                Text("Animal Math").font(.largeTitle)
-                Spacer()
+        NavigationView {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
                 
-                Text("What is your favorite color?")
-                    .font(.headline)
-                    .padding()
-                Text("Choose and tap").font(.caption)
-                
-                HStack {
-                    ForEach(game.colorArray) { favColor in
-                        ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected).onTapGesture {
-                            self.game.colorSelected(color: favColor)
-                        }
+                VStack {
+                    ZStack{
+                        RoundedRectangle(cornerRadius: 10).fill(themeColor)
+                        Text("Animal Math")
+                        .font(.largeTitle)
                         
+                    }.frame(width: 250, height: 50, alignment: .center)
+                    
+                    
+                    Text("What is your favorite color?")
+                        .font(.headline)
+                        .padding()
+                    Text("Choose and tap").font(.caption)
+                    
+                    HStack(spacing: 10) {
+                        ForEach(game.colorArray) { favColor in
+                            ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
+                                .onTapGesture {
+                                self.game.colorSelected(color: favColor)
+                            }.accessibility(identifier: "ColorView")
+                            
+                        }
                     }
+                    
+                    
+                    Text("What is your favorite animal?")
+                        .font(.headline)
+                        .padding()
+                    Text("Choose and tap").font(.caption)
+                    
+                    HStack(spacing: 10) {
+                        ForEach(game.animalArray) { animal in
+                            AnimalChoiceView(animalName: animal.content, isTapped: animal.isSelected)
+                                .onTapGesture {
+                                    self.game.animalSelected(animalName: animal.content)
+                            }
+                        }
+                        .accessibility(identifier: "AnimalView")
+                    }
+                    
+                    Spacer()
+                    
                 }
-//
-//                HStack(alignment: .center) {
-//                    ForEach(game.colorArray, id: \.self) { favColor in
-//                        ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
-////
-////                        }
-////                    }
-//                }
-//                .padding(.leading, 20)
-//                .padding(.trailing, 20)
-                
-                Spacer()
                 
             }
-            
         }
     }
     

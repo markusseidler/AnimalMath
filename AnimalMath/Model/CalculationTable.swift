@@ -8,8 +8,8 @@
 
 import Foundation
 
-
-struct CalculationTable {
+ 
+struct CalculationTable<DisplayContent> where DisplayContent: Equatable {
     
     // MARK: - Public properties
     
@@ -18,21 +18,39 @@ struct CalculationTable {
     var calculationResults: [Double] = []
     
     var colorArray: [FavoriteColor] = [
-    FavoriteColor(color: .blue),
-    FavoriteColor(color: .gray),
-    FavoriteColor(color: .green),
+    FavoriteColor(color: .yellow),
     FavoriteColor(color: .orange),
-    FavoriteColor(color: .pink),
-    FavoriteColor(color: .purple),
     FavoriteColor(color: .red),
-    FavoriteColor(color: .yellow)]
+    FavoriteColor(color: .purple),
+    FavoriteColor(color: .blue),
+    FavoriteColor(color: .green),
+    FavoriteColor(color: .gray)]
     
-    init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, operation: (Double, Double) -> Double) {
+    var colorSelected: FavoriteColor? {
+        get {
+            colorArray.first { (color) -> Bool in
+                color.isSelected
+            }
+        }
+    }
+    
+    var displayItemSelected: DisplayItem<DisplayContent>? {
+        get {
+            displayItems.first {$0.isSelected}
+        }
+    }
+    
+    private (set) var displayItems = [DisplayItem<DisplayContent>]()
+    
+    init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, displayContentArray: [DisplayContent], operation: (Double, Double) -> Double) {
         self.highestCalculationInput = highestNumber
         self.allPotentialInputs = [Int](1...self.highestCalculationInput)
         self.numberOfQuestions = numberOfQuestionsEnum.asInteger
         self.selectRandomInputsAndCalculateResults(operation: operation)
         
+        for content in displayContentArray {
+            self.displayItems.append(DisplayItem(content: content))
+        }
     }
     
     // MARK: - Private properties
@@ -40,6 +58,7 @@ struct CalculationTable {
     private var numberOfQuestions: Int = 0
     private let highestCalculationInput: Int
     private let allPotentialInputs: [Int]
+    
     
     // MARK: - Public methods
     
@@ -50,19 +69,31 @@ struct CalculationTable {
         }.count
         
         if let tappedIndex = self.colorArray.firstIndex(of: color) {
-            
             let isTapped = self.colorArray[tappedIndex].isSelected
-            
             if isTapped {
                 self.colorArray[tappedIndex].isSelected = false
             } else if !isTapped && countTapped == 0 {
                 self.colorArray[tappedIndex].isSelected = true
             }
         }
-        
-    
     }
+    
+    mutating func displayItemTapped(of content: DisplayContent) {
 
+        let countTappedDisplay = self.displayItems.filter {$0.isSelected}.count
+        
+        let tappedIndexDisplay = self.displayItems.firstIndex {$0.content == content}!
+        
+        let isTappedDisplay = self.displayItems[tappedIndexDisplay].isSelected
+        
+        if isTappedDisplay {
+            self.displayItems[tappedIndexDisplay].isSelected = false
+        } else if !isTappedDisplay && countTappedDisplay == 0 {
+            self.displayItems[tappedIndexDisplay].isSelected = true
+        }
+    }
+    
+    
     // MARK: - Private methods
     
     private mutating func selectRandomInputsAndCalculateResults(operation: (Double, Double) -> Double) {
@@ -77,3 +108,4 @@ struct CalculationTable {
     }
     
 }
+
