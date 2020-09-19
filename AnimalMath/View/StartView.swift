@@ -18,10 +18,7 @@ struct StartView: View {
         game.selectedColor?.color ?? Color.offwhite
     }
     
-//    var fontColor: Color {
-//        game.selectedColor?.color ?? Color.black
-//    }
-    
+    @State private var stepperTest: Int = 1
     
     var body: some View {
         
@@ -39,10 +36,12 @@ struct StartView: View {
                     }.frame(width: 250, height: 50, alignment: .center)
                     
                     
-                    Text("What is your favorite color?")
-                        .font(.headline)
-                        .padding()
-                    Text("Choose and tap").font(.caption)
+                    Group {
+                        Text("What is your favourite color?")
+                            .font(.headline)
+                            .padding()
+                        Text("Choose and tap").font(.caption)
+                    }
                     
                     HStack(spacing: 10) {
                         ForEach(game.colorArray) { favColor in
@@ -55,10 +54,12 @@ struct StartView: View {
                     }
                     
                     
-                    Text("What is your favorite animal?")
-                        .font(.headline)
-                        .padding()
-                    Text("Choose and tap").font(.caption)
+                    Group {
+                        Text("What is your favourite animal?")
+                            .font(.headline)
+                            .padding()
+                        Text("Choose and tap").font(.caption)
+                    }
                     
                     HStack(spacing: 10) {
                         ForEach(game.animalArray) { animal in
@@ -70,12 +71,42 @@ struct StartView: View {
                         .accessibility(identifier: "AnimalView")
                     }
                     
+                    Group {
+                        
+                        Text("How long do you want to play? ")
+                            .font(.headline)
+                            .padding()
+                        Text("Choose and step").font(.caption)
+                        
+                        Stepper("Number of questions:         \(stepperTest)", value: $stepperTest, in: 1...12).padding(.leading, 20).padding(.trailing, 20)
+                        
+                    }
+                    
+                    Group {
+                        
+                        Text("How difficult should be? ")
+                            .font(.headline)
+                            .padding()
+                        Text("Choose and step").font(.caption)
+                        
+                        Stepper("Highest number:                  \(stepperTest)", value: $stepperTest, in: 1...12).padding(.leading, 20).padding(.trailing, 20)
+                        
+                    }
+                    
+                    Button(action: testFunction) {
+                        Text("Start Game")
+                    }
+                    
                     Spacer()
                     
                 }
                 
             }
         }
+    }
+    
+    func testFunction() {
+        print("test")
     }
     
 }
