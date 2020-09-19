@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C42510EF2800C13B1E /* AppDelegate.swift */; };
 		281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C62510EF2800C13B1E /* SceneDelegate.swift */; };
-		281C00C92510EF2800C13B1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C82510EF2800C13B1E /* ContentView.swift */; };
+		281C00C92510EF2800C13B1E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C82510EF2800C13B1E /* StartView.swift */; };
 		281C00CB2510EF2900C13B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CA2510EF2900C13B1E /* Assets.xcassets */; };
 		281C00CE2510EF2900C13B1E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CD2510EF2900C13B1E /* Preview Assets.xcassets */; };
 		281C00D12510EF2900C13B1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */; };
 		281C00DC2510EF2900C13B1E /* AnimalMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */; };
 		281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */; };
+		283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 283EB6A025160247004AB1F0 /* scratchPaper.rtf */; };
+		28855913251247FB000813CA /* Color+NewColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28855912251247FB000813CA /* Color+NewColors.swift */; };
+		288559152512544B000813CA /* ColorChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288559142512544B000813CA /* ColorChoiceView.swift */; };
 		28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B582511D0FA00E96553 /* CalculationTable.swift */; };
 		28D80B5B2511D66D00E96553 /* MultiplicationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B5A2511D66D00E96553 /* MultiplicationGame.swift */; };
 		28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */; };
@@ -41,7 +44,7 @@
 		281C00C12510EF2800C13B1E /* AnimalMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281C00C42510EF2800C13B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		281C00C62510EF2800C13B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		281C00C82510EF2800C13B1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		281C00C82510EF2800C13B1E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		281C00CA2510EF2900C13B1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		281C00CD2510EF2900C13B1E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		281C00D02510EF2900C13B1E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -52,6 +55,9 @@
 		281C00E22510EF2900C13B1E /* AnimalMathUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnimalMathUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMathUITests.swift; sourceTree = "<group>"; };
 		281C00E82510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		283EB6A025160247004AB1F0 /* scratchPaper.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = scratchPaper.rtf; sourceTree = "<group>"; };
+		28855912251247FB000813CA /* Color+NewColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+NewColors.swift"; sourceTree = "<group>"; };
+		288559142512544B000813CA /* ColorChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChoiceView.swift; sourceTree = "<group>"; };
 		28D80B582511D0FA00E96553 /* CalculationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTable.swift; sourceTree = "<group>"; };
 		28D80B5A2511D66D00E96553 /* MultiplicationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationGame.swift; sourceTree = "<group>"; };
 		28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionsSet.swift; sourceTree = "<group>"; };
@@ -114,6 +120,7 @@
 				281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */,
 				281C00D22510EF2900C13B1E /* Info.plist */,
 				281C00CC2510EF2900C13B1E /* Preview Content */,
+				283EB6A025160247004AB1F0 /* scratchPaper.rtf */,
 			);
 			path = AnimalMath;
 			sourceTree = "<group>";
@@ -164,7 +171,9 @@
 		281C00F62510F0CB00C13B1E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				281C00C82510EF2800C13B1E /* ContentView.swift */,
+				281C00C82510EF2800C13B1E /* StartView.swift */,
+				28855912251247FB000813CA /* Color+NewColors.swift */,
+				288559142512544B000813CA /* ColorChoiceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -275,6 +284,7 @@
 			files = (
 				281C00D12510EF2900C13B1E /* LaunchScreen.storyboard in Resources */,
 				281C00CE2510EF2900C13B1E /* Preview Assets.xcassets in Resources */,
+				283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */,
 				281C00CB2510EF2900C13B1E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +313,11 @@
 				28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */,
 				28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */,
 				281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */,
+				28855913251247FB000813CA /* Color+NewColors.swift in Sources */,
 				28D80B5B2511D66D00E96553 /* MultiplicationGame.swift in Sources */,
+				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
-				281C00C92510EF2800C13B1E /* ContentView.swift in Sources */,
+				281C00C92510EF2800C13B1E /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

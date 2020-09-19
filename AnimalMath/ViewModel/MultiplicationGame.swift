@@ -8,18 +8,27 @@
 
 import Foundation
 
-class MultiplicationGame {
+class MultiplicationGame: ObservableObject {
     
-    var calculationTable: CalculationTable
-    
-    init() {
-        self.calculationTable = CalculationTable(numberOfQuestionsEnum: .five, highestNumber: 5) { left, right in
-            left * right
-        }
-        print(calculationTable.leftSideNumbers)
-        print(calculationTable.rightSideNumbers)
-        print(calculationTable.calculationResults)
+
+    var colorArray: [FavoriteColor] {
+        multiplicationTable.colorArray
     }
     
+    // MARK: - Private Properties
+    @Published private var multiplicationTable: CalculationTable = MultiplicationGame.createMultiplicationTable()
+    
+    private static func createMultiplicationTable() -> CalculationTable {
+        return CalculationTable(numberOfQuestionsEnum: .five, highestNumber: 5) { left, right in
+            left * right
+        }
+    }
+    
+    
+    // MARK: - Public Methods - User Intent
+    
+    func colorSelected(color: FavoriteColor) {
+        multiplicationTable.colorTapped(color: color)
+    }
     
 }

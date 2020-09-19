@@ -8,12 +8,6 @@
 
 import Foundation
 
-//enum numberOfQuestionsAvailable {
-//    case five
-//    case ten
-//    case twenty
-//    case all
-//}
 
 struct CalculationTable {
     
@@ -22,7 +16,16 @@ struct CalculationTable {
     var leftSideNumbers: [Double] = []
     var rightSideNumbers: [Double] = []
     var calculationResults: [Double] = []
-//    var operation: (Int, Int) -> Int
+    
+    var colorArray: [FavoriteColor] = [
+    FavoriteColor(color: .blue),
+    FavoriteColor(color: .gray),
+    FavoriteColor(color: .green),
+    FavoriteColor(color: .orange),
+    FavoriteColor(color: .pink),
+    FavoriteColor(color: .purple),
+    FavoriteColor(color: .red),
+    FavoriteColor(color: .yellow)]
     
     init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, operation: (Double, Double) -> Double) {
         self.highestCalculationInput = highestNumber
@@ -39,17 +42,28 @@ struct CalculationTable {
     private let allPotentialInputs: [Int]
     
     // MARK: - Public methods
+    
+    mutating func colorTapped(color: FavoriteColor) {
+        
+        let countTapped = self.colorArray.filter { (favColor) -> Bool in
+            favColor.isSelected
+        }.count
+        
+        if let tappedIndex = self.colorArray.firstIndex(of: color) {
+            
+            let isTapped = self.colorArray[tappedIndex].isSelected
+            
+            if isTapped {
+                self.colorArray[tappedIndex].isSelected = false
+            } else if !isTapped && countTapped == 0 {
+                self.colorArray[tappedIndex].isSelected = true
+            }
+        }
+        
+    
+    }
 
     // MARK: - Private methods
-    
-//    private func convertEnum(by numberOfQuestionsEnum: numberOfQuestionsSet) -> Int {
-//        switch numberOfQuestionsEnum {
-//        case .five: return 5
-//        case .ten: return 10
-//        case .twenty: return 20
-//        case .all: return allPotentialInputs.count
-//        }
-//    }
     
     private mutating func selectRandomInputsAndCalculateResults(operation: (Double, Double) -> Double) {
         for _ in 0..<numberOfQuestions {
