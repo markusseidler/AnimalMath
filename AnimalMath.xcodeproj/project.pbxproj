@@ -16,6 +16,7 @@
 		281C00DC2510EF2900C13B1E /* AnimalMathTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00DB2510EF2900C13B1E /* AnimalMathTests.swift */; };
 		281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */; };
 		283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 283EB6A025160247004AB1F0 /* scratchPaper.rtf */; };
+		283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283EB6A225160274004AB1F0 /* FavoriteColor.swift */; };
 		28855913251247FB000813CA /* Color+NewColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28855912251247FB000813CA /* Color+NewColors.swift */; };
 		288559152512544B000813CA /* ColorChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288559142512544B000813CA /* ColorChoiceView.swift */; };
 		28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B582511D0FA00E96553 /* CalculationTable.swift */; };
@@ -56,6 +57,7 @@
 		281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalMathUITests.swift; sourceTree = "<group>"; };
 		281C00E82510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		283EB6A025160247004AB1F0 /* scratchPaper.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = scratchPaper.rtf; sourceTree = "<group>"; };
+		283EB6A225160274004AB1F0 /* FavoriteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteColor.swift; sourceTree = "<group>"; };
 		28855912251247FB000813CA /* Color+NewColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+NewColors.swift"; sourceTree = "<group>"; };
 		288559142512544B000813CA /* ColorChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChoiceView.swift; sourceTree = "<group>"; };
 		28D80B582511D0FA00E96553 /* CalculationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTable.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			children = (
 				28D80B582511D0FA00E96553 /* CalculationTable.swift */,
 				28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */,
+				283EB6A225160274004AB1F0 /* FavoriteColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
 				281C00C92510EF2800C13B1E /* StartView.swift in Sources */,
+				283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
