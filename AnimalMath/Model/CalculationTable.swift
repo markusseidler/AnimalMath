@@ -103,7 +103,7 @@ struct CalculationTable<DisplayContent> where DisplayContent: Equatable {
         
         var amountOfCalculations: Int
         
-        if numberOfQuestions == 88888888 {
+        if numberOfQuestions == 88888888 || maximumNumberOfCalculations <= numberOfQuestions {
             amountOfCalculations = maximumNumberOfCalculations
         } else {
             amountOfCalculations = numberOfQuestions
