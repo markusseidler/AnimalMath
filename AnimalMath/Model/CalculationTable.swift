@@ -41,6 +41,9 @@ struct CalculationTable<DisplayContent> where DisplayContent: Equatable {
     }
     
     private (set) var displayItems = [DisplayItem<DisplayContent>]()
+    private var maximumNumberOfCalculations: Int {
+        self.highestCalculationInput * self.highestCalculationInput
+    }
     
     init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, displayContentArray: [DisplayContent], operation: (Double, Double) -> Double) {
         self.highestCalculationInput = highestNumber
@@ -97,13 +100,21 @@ struct CalculationTable<DisplayContent> where DisplayContent: Equatable {
     // MARK: - Private methods
     
     private mutating func selectRandomInputsAndCalculateResults(operation: (Double, Double) -> Double) {
-        for _ in 0..<numberOfQuestions {
+        
+        var amountOfCalculations: Int
+        
+        if numberOfQuestions == 88888888 {
+            amountOfCalculations = maximumNumberOfCalculations
+        } else {
+            amountOfCalculations = numberOfQuestions
+        }
+        
+        for _ in 0..<amountOfCalculations {
             leftSideNumbers.insert(Double(allPotentialInputs.randomElement()!), at: 0)
             rightSideNumbers.insert(Double(allPotentialInputs.randomElement()!), at: 0)
         }
         
         calculationResults = zip(leftSideNumbers, rightSideNumbers).map() {(left, right) in operation(left, right)}
-        
         
     }
     

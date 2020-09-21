@@ -11,21 +11,20 @@ import XCTest
 
 class AnimalMathTests: XCTestCase {
     
-    var sutMultiplication: CalculationTable?
-    var sutAddition: CalculationTable?
+    var sutMultiplication: CalculationTable<String>?
+    var sutAddition: CalculationTable<String>?
     let numberOfQuestions: NumberOfQuestionsSet = .five
     let highestNumber = 10
     var multiplicationResultArray = [Double]()
     var additionResultArray = [Double]()
-//    let leftSide = [Int](1...10).shuffled()
-//    let rightSide = [Int](1...10).shuffled()
+    let animalNames: [String] = ["cow", "elephant", "chick", "panda", "dog", "pig"]
     
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
         super.setUp()
-        sutMultiplication = CalculationTable(numberOfQuestionsEnum: numberOfQuestions, highestNumber: highestNumber) {$0 * $1}
-        sutAddition = CalculationTable(numberOfQuestionsEnum: numberOfQuestions, highestNumber: highestNumber) {$0 + $1}
+        sutMultiplication = CalculationTable(numberOfQuestionsEnum: numberOfQuestions, highestNumber: highestNumber, displayContentArray: animalNames) {$0 * $1}
+        sutAddition = CalculationTable(numberOfQuestionsEnum: numberOfQuestions, highestNumber: highestNumber, displayContentArray: animalNames) {$0 + $1}
     
     }
 

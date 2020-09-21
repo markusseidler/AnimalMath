@@ -9,5 +9,5 @@
 import SwiftUI
 
 extension Color {
-    static let offwhite = Color(red: 225/255, green: 225/255, blue: 225/255)
+    static let offwhite = Color(.sRGB, red: 225/255, green: 225/255, blue: 225/255)
 }

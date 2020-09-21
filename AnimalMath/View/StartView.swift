@@ -18,22 +18,24 @@ struct StartView: View {
         game.selectedColor?.color ?? Color.offwhite
     }
     
-    @State private var stepperTest: Int = 1
+    @State private var stepperTest: Int = 6
     
     var body: some View {
-        
-        NavigationView {
+         NavigationView {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     ZStack{
-                        RoundedRectangle(cornerRadius: 10).fill(themeColor)
+                        RoundedRectangle(cornerRadius: cornerRadius).fill(themeColor)
                         Text("Animal Math")
                         .font(.largeTitle)
                         
-                    }.frame(width: 250, height: 50, alignment: .center)
+                        }.frame(width: 250, height: 50, alignment: .center)
+                        .padding(.top, paddingLeadingTrailing)
+                    
+                    Spacer()
                     
                     
                     Group {
@@ -43,15 +45,7 @@ struct StartView: View {
                         Text("Choose and tap").font(.caption)
                     }
                     
-                    HStack(spacing: 10) {
-                        ForEach(game.colorArray) { favColor in
-                            ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
-                                .onTapGesture {
-                                self.game.colorSelected(color: favColor)
-                            }.accessibility(identifier: "ColorView")
-                            
-                        }
-                    }
+                    ColorChoiceHstack(game: game)
                     
                     
                     Group {
@@ -61,24 +55,22 @@ struct StartView: View {
                         Text("Choose and tap").font(.caption)
                     }
                     
-                    HStack(spacing: 10) {
-                        ForEach(game.animalArray) { animal in
-                            AnimalChoiceView(animalName: animal.content, isTapped: animal.isSelected)
-                                .onTapGesture {
-                                    self.game.animalSelected(animalName: animal.content)
-                            }
-                        }
-                        .accessibility(identifier: "AnimalView")
-                    }
+                    AnimalChoiceHstack(game: game)
                     
                     Group {
                         
                         Text("How long do you want to play? ")
                             .font(.headline)
                             .padding()
-                        Text("Choose and step").font(.caption)
+                        Text("Number of Questions").font(.caption)
                         
-                        Stepper("Number of questions:         \(stepperTest)", value: $stepperTest, in: 1...12).padding(.leading, 20).padding(.trailing, 20)
+                        Picker(selection: $game.maxNumber, label: Text("What?")) {
+                            ForEach(NumberOfQuestionsSet.allCases, id: \.self) { amountString in Text("\(amountString.asString)")
+                                
+                            }
+                            }.pickerStyle(SegmentedPickerStyle())
+                            .padding(.leading, paddingLeadingTrailing)
+                            .padding(.trailing, paddingLeadingTrailing)
                         
                     }
                     
@@ -89,25 +81,33 @@ struct StartView: View {
                             .padding()
                         Text("Choose and step").font(.caption)
                         
-                        Stepper("Highest number:                  \(stepperTest)", value: $stepperTest, in: 1...12).padding(.leading, 20).padding(.trailing, 20)
+                        Stepper("Highest number:           \(stepperTest)", value: $stepperTest , in: 1...12).padding(.leading, paddingLeadingTrailing).padding(.trailing, paddingLeadingTrailing)
                         
-                    }
-                    
-                    Button(action: testFunction) {
-                        Text("Start Game")
                     }
                     
                     Spacer()
                     
+                    StartGameButton(buttonAction: testFunction, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                        .padding(.bottom, paddingLeadingTrailing)
+                    
+                    
                 }
                 
             }
+            .navigationBarTitle("")
+            .navigationBarHidden(true)
         }
     }
     
     func testFunction() {
-        print("test")
+        game.highestNumber = stepperTest
+        game.startGame()
+        print(game.calculationResult)
     }
+    
+    // MARK: - View Constants
+    let cornerRadius: CGFloat = 20
+    let paddingLeadingTrailing: CGFloat = 20
     
 }
 
@@ -116,3 +116,4 @@ struct ContentView_Previews: PreviewProvider {
         StartView()
     }
 }
+

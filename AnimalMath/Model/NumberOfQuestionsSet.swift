@@ -10,11 +10,15 @@ import Foundation
 
 //https://stackoverflow.com/questions/27706832/can-swift-enums-have-multiple-raw-values
 
-enum NumberOfQuestionsSet {
+// create a struct as EnvironmentObject rather than use this enum
+// Struct with this enum as input and with highestnumber as second input
+
+enum NumberOfQuestionsSet: CaseIterable {
+    
     case five
     case ten
     case twenty
-    case all(Int)
+    case all
     
     var asInteger: Int {
         switch self {
@@ -24,8 +28,8 @@ enum NumberOfQuestionsSet {
             return 10
         case .twenty:
             return 20
-        case let .all(total):
-            return total
+        case .all:
+            return 88888888
         }
     }
     
