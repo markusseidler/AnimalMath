@@ -16,6 +16,7 @@ struct StartView: View {
     
     @ObservedObject var game = MultiplicationGame()
     @State private var stepperTest: Int = 6
+    @State private var showGameView = false
     
     var themeColor: Color {
         game.selectedColor?.color ?? Color.offwhite
@@ -65,7 +66,10 @@ struct StartView: View {
                     }
                     Spacer()
                     StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
-                        .padding(.bottom, paddingLeadingTrailing)
+                        .padding(.bottom, paddingLeadingTrailing).sheet(isPresented: $showGameView) {
+                            GameView()
+                        }
+                    
                 }
             }
             .navigationBarTitle("")
@@ -76,6 +80,8 @@ struct StartView: View {
     private func startGameButtonTapped() {
         game.highestNumber = stepperTest
         game.startGame()
+        showGameView = true
+        
     }
     
     
