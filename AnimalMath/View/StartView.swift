@@ -12,13 +12,20 @@ import SwiftUI
 
 struct StartView: View {
     
+    // MARK: - View Variables
+    
     @ObservedObject var game = MultiplicationGame()
+    @State private var stepperTest: Int = 6
     
     var themeColor: Color {
         game.selectedColor?.color ?? Color.offwhite
     }
     
-    @State private var stepperTest: Int = 6
+    
+    // MARK: - View Constants
+    let cornerRadius: CGFloat = 20
+    let paddingLeadingTrailing: CGFloat = 20
+    let viewPadding: CGFloat = 10
     
     var body: some View {
          NavigationView {
@@ -27,87 +34,50 @@ struct StartView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    ZStack{
-                        RoundedRectangle(cornerRadius: cornerRadius).fill(themeColor)
-                        Text("Animal Math")
-                        .font(.largeTitle)
-                        
-                        }.frame(width: 250, height: 50, alignment: .center)
-                        .padding(.top, paddingLeadingTrailing)
-                    
+                    StartLabelView(paddingLeadingTrailing: paddingLeadingTrailing, themeColor: themeColor, cornerRadius: cornerRadius)
                     Spacer()
-                    
-                    
                     Group {
-                        Text("What is your favourite color?")
-                            .font(.headline)
-                            .padding()
-                        Text("Choose and tap").font(.caption)
-                    }
-                    
-                    ColorChoiceHstack(game: game)
-                    
-                    
-                    Group {
-                        Text("What is your favourite animal?")
-                            .font(.headline)
-                            .padding()
-                        Text("Choose and tap").font(.caption)
-                    }
-                    
-                    AnimalChoiceHstack(game: game)
-                    
-                    Group {
+                        QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
                         
-                        Text("How long do you want to play? ")
-                            .font(.headline)
-                            .padding()
-                        Text("Number of Questions").font(.caption)
-                        
-                        Picker(selection: $game.maxNumber, label: Text("What?")) {
-                            ForEach(NumberOfQuestionsSet.allCases, id: \.self) { amountString in Text("\(amountString.asString)")
-                                
+                        ColorChoiceHstack(game: game)
+                            .padding(.bottom, viewPadding)
+                    }
+                    Group {
+                        QuestionLabelView(QuestionHeader: .favoriteAnimal, QuestionCaption: .chooseAndTap)
+                        AnimalChoiceHstack(game: game)
+                            .padding(.bottom, viewPadding)
+                    }
+                    Group {
+                        QuestionLabelView(QuestionHeader: .lengthOfPlay, QuestionCaption: .amountOfQuestions)
+                        Picker(selection: $game.maxNumber, label: Text("")){
+                            ForEach(NumberOfQuestionsSet.allCases, id: \.self) { amountString in Text("\(amountString.rawValue)")
                             }
-                            }.pickerStyle(SegmentedPickerStyle())
-                            .padding(.leading, paddingLeadingTrailing)
-                            .padding(.trailing, paddingLeadingTrailing)
-                        
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding(.leading, paddingLeadingTrailing)
+                        .padding(.trailing, paddingLeadingTrailing)
+                        .padding(.bottom, viewPadding)
                     }
                     
                     Group {
-                        
-                        Text("How difficult should be? ")
-                            .font(.headline)
-                            .padding()
-                        Text("Choose and step").font(.caption)
-                        
+                        QuestionLabelView(QuestionHeader: .challengeDegree, QuestionCaption: .chooseAndStep)
                         Stepper("Highest number:           \(stepperTest)", value: $stepperTest , in: 1...12).padding(.leading, paddingLeadingTrailing).padding(.trailing, paddingLeadingTrailing)
-                        
                     }
-                    
                     Spacer()
-                    
-                    StartGameButton(buttonAction: testFunction, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                    StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
                         .padding(.bottom, paddingLeadingTrailing)
-                    
-                    
                 }
-                
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
-        }
+         }
     }
     
-    func testFunction() {
+    private func startGameButtonTapped() {
         game.highestNumber = stepperTest
         game.startGame()
-        print(game.calculationResult)
     }
     
-    // MARK: - View Constants
-    let cornerRadius: CGFloat = 20
-    let paddingLeadingTrailing: CGFloat = 20
     
 }
 
@@ -116,4 +86,3 @@ struct ContentView_Previews: PreviewProvider {
         StartView()
     }
 }
-
