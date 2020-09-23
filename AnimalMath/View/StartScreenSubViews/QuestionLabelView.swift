@@ -17,18 +17,20 @@ enum QuestionLabels: String {
     case chooseAndStep = "Choose and step"
     case amountOfQuestions = "Amount of Questions"
     
+    case howMuchIs = "How much is?"
+    case multiplied = "multiplied by"
 }
 
 struct QuestionLabelView: View {
     let QuestionHeader: QuestionLabels
-    let QuestionCaption: QuestionLabels
+    let QuestionCaption: QuestionLabels?
     
     var body: some View {
         VStack {
             Text(QuestionHeader.rawValue)
                 .font(.headline)
                 .padding()
-            Text(QuestionCaption.rawValue)
+            Text(QuestionCaption?.rawValue ?? "")
                 .font(.caption)
         }
     }

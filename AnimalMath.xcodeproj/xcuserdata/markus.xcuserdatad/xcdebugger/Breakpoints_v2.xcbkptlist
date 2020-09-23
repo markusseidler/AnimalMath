@@ -5,22 +5,91 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "7A66885B-FF70-4146-A4ED-4D9901EE7795"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            breakpointStackSelectionBehavior = "1"
+            scope = "1"
+            stopOnStyle = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SwiftErrorBreakpoint">
+         <BreakpointContent
+            uuid = "1F535A19-7652-4CC2-AB8F-228F60A3E3F2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D"
+            uuid = "2BB0019C-2E83-4027-87BB-3CBF19E79DDD"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnimalMath/Model/CalculationTable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "displayItemSelected"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2BB0019C-2E83-4027-87BB-3CBF19E79DDD - 96bd7580074baed0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimalMath.CalculationTable.displayItemSelected.getter : Swift.Optional&lt;AnimalMath.DisplayItem&lt;A&gt;&gt;"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  uuid = "2BB0019C-2E83-4027-87BB-3CBF19E79DDD - faa84359d11d78a0"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AnimalMath.DisplayItem&lt;A&gt;) -&gt; Swift.Bool in AnimalMath.CalculationTable.displayItemSelected.getter : Swift.Optional&lt;AnimalMath.DisplayItem&lt;A&gt;&gt;"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4CE2774D-4C18-4B4D-81EE-3B01B6AE98E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/Model/CalculationTable.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "displayItemTapped(of:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D - f4620f863b96177e"
+                  uuid = "4CE2774D-4C18-4B4D-81EE-3B01B6AE98E0 - f4620f863b961619"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -30,24 +99,24 @@
                   urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "261">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "523">
                </Location>
                <Location
-                  uuid = "58EB03B6-1CE9-47FA-9836-A1C79AC32E2D - 9afb9aabd882e40"
-                  shouldBeEnabled = "Yes"
+                  uuid = "4CE2774D-4C18-4B4D-81EE-3B01B6AE98E0 - 57d43ef83c49528"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (AnimalMath.DisplayItem&lt;A&gt;) -&gt; Swift.Bool in AnimalMath.CalculationTable.displayItemTapped(of: A) -&gt; ()"
+                  symbolName = "closure #2 (AnimalMath.DisplayItem&lt;A&gt;) -&gt; Swift.Bool in AnimalMath.CalculationTable.displayItemTapped(of: A) -&gt; ()"
                   moduleName = "AnimalMath"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/Model/CalculationTable.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "32">
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "73">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -55,17 +124,289 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A390229D-369C-43AD-9458-94894B94C0C7"
+            uuid = "FB089A20-6375-407B-9237-F8E68F91E931"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/View/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "FB089A20-6375-407B-9237-F8E68F91E931 - 98cac621cdcc16de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "334">
+               </Location>
+               <Location
+                  uuid = "FB089A20-6375-407B-9237-F8E68F91E931 - 98cac621cdcc16de"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "2337">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C35DAAE9-8AD4-4B55-B8E6-5D7EED696E77"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AnimalMath/Model/CalculationTable.swift"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "MultiplicationGame"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1163DAAC-4650-4D11-B0DE-4CA1270D25C3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "MultiplicationGame"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FB7F4039-384D-4F33-861E-8D23FA6AA685"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "MultiplicationGame"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4EC6C996-938C-4B7D-8CDE-3152A4643927"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "MultiplicationGame"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7BF3C751-EB17-444F-B3E3-794723B93462"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "MultiplicationGame"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "44231E6F-9851-48EF-8F3E-83DA1F314FB2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "getInputAndOutput()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11F25231-0DD1-4327-9785-F47C7295E4BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "85"
             endingLineNumber = "85"
-            landmarkName = "displayItemTapped(of:)"
+            landmarkName = "getInputAndOutput()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9D8A9CC5-085C-4B74-895E-7E41DB391460"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/View/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "95207D06-5D01-4813-AA86-9389A0164A25"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/View/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F128066E-42BF-4512-BE91-74FE877D38F4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/View/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F128066E-42BF-4512-BE91-74FE877D38F4 - 1154652a728c781f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "130">
+               </Location>
+               <Location
+                  uuid = "F128066E-42BF-4512-BE91-74FE877D38F4 - 68b681148d26f701"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (AnimalMath.DisplayItem&lt;Swift.String&gt;) -&gt; &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "204">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F9920FE4-785B-4804-AB58-192FC55B9D9A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/View/GameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F9920FE4-785B-4804-AB58-192FC55B9D9A - 98cac621cdcc16ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+               <Location
+                  uuid = "F9920FE4-785B-4804-AB58-192FC55B9D9A - 1154652a728c781f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt; in closure #1 () -&gt; SwiftUI.TupleView&lt;(AnimalMath.QuestionLabelView, Swift.Optional&lt;SwiftUI.LazyHGrid&lt;SwiftUI.ForEach&lt;Swift.Array&lt;AnimalMath.DisplayItem&lt;Swift.String&gt;&gt;, AnimalMath.DisplayItem&lt;Swift.String&gt;, &lt;&lt;opaque return type of (extension in SwiftUI):SwiftUI.View.id&lt;A where A1: Swift.Hashable&gt;(A1) -&gt; some&gt;&gt;.0&gt;&gt;&gt;)&gt; in AnimalMath.GameView.body.getter : some"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/View/GameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "130">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

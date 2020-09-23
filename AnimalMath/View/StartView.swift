@@ -14,7 +14,8 @@ struct StartView: View {
     
     // MARK: - View Variables
     
-    @ObservedObject var game = MultiplicationGame()
+//    @ObservedObject var game = MultiplicationGame()
+    @EnvironmentObject var game: MultiplicationGame
     @State private var stepperTest: Int = 6
     @State private var showGameView = false
     
@@ -26,7 +27,7 @@ struct StartView: View {
     // MARK: - View Constants
     let cornerRadius: CGFloat = 20
     let paddingLeadingTrailing: CGFloat = 20
-    let viewPadding: CGFloat = 10
+    let viewPadding: CGFloat = 5
     
     var body: some View {
          NavigationView {
@@ -65,14 +66,23 @@ struct StartView: View {
                         Stepper("Highest number:           \(stepperTest)", value: $stepperTest , in: 1...12).padding(.leading, paddingLeadingTrailing).padding(.trailing, paddingLeadingTrailing)
                     }
                     Spacer()
-                    StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
-                        .padding(.bottom, paddingLeadingTrailing).sheet(isPresented: $showGameView) {
-                            GameView()
-                        }
                     
+                    if #available(iOS 14.0, *) {
+                        NavigationLink(
+                            destination: GameView(),
+                            isActive: $showGameView) {
+                            
+                            
+                            StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                                .padding(.bottom, paddingLeadingTrailing)
+                            
+                        }
+                    } else {
+                        // Fallback on earlier versions
+                    }
                 }
             }
-            .navigationBarTitle("")
+            .navigationBarTitle("New Game")
             .navigationBarHidden(true)
          }
     }
@@ -81,6 +91,8 @@ struct StartView: View {
         game.highestNumber = stepperTest
         game.startGame()
         showGameView = true
+        game.createAnimalInput()
+        game.getInputAndOutput()
         
     }
     

@@ -10,6 +10,8 @@ import Foundation
 
 class MultiplicationGame: ObservableObject {
     
+    // MARK: - Public properties
+    
     var maxNumber: NumberOfQuestionsSet = .five
     
     var highestNumber: Int = 6
@@ -33,6 +35,9 @@ class MultiplicationGame: ObservableObject {
     var calculationResult: [Double] {
         multiplicationTable.calculationResults
     }
+    
+    var calculationInput = [String : [DisplayItem<String>]]()
+    var calculationOutput: Double?
 
     static let animalNames: [String] = ["cow", "elephant", "chick", "panda", "dog", "pig"]
     
@@ -48,29 +53,11 @@ class MultiplicationGame: ObservableObject {
     
     @Published private var multiplicationTable: CalculationTable<String>
     
-//    @Published private var multiplicationTable: CalculationTable<String> = MultiplicationGame.createMultiplicationTable()
-//
-//    private static func createMultiplicationTable() -> CalculationTable<String> {
-//
-//        return CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: 5, displayContentArray: animalNames) { left, right in
-//            left * right
-//        }
-//    }
+    private var animalNameTapped: String = ""
+    private var leftAnimalInputArray = [[DisplayItem<String>]]()
+    private var rightAnimalInputArray = [[DisplayItem<String>]]()
+    private var resultArray = [Double]()
     
-//    @Published private var multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: 5, displayContentArray: animalNames) { (left, right) -> Double in
-//        left * right
-//    }
-    
-//    init() {
-//        self.maxNumber = .five
-//        multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: 5, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
-//            left * right
-//        })
-//
-//    }
-//
-//
-//
     
     // MARK: - Public Methods - User Intent
     
@@ -78,7 +65,8 @@ class MultiplicationGame: ObservableObject {
         multiplicationTable.colorTapped(color: color)
     }
     
-    func animalSelected(animalName: String) {
+    func selectAnimal(animalName: String) {
+        animalNameTapped = animalName
         multiplicationTable.displayItemTapped(of: animalName)
     }
     
@@ -86,5 +74,43 @@ class MultiplicationGame: ObservableObject {
         multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
             left * right
         })
+        selectAnimal(animalName: animalNameTapped)
+        createAnimalInput()
+        
     }
+    
+    func getInputAndOutput() {
+        calculationInput["left"] = leftAnimalInputArray.remove(at: 0)
+        calculationInput["right"] = rightAnimalInputArray.remove(at: 0)
+        calculationOutput = resultArray.remove(at: 0)
+//        print(calculationInput)
+    }
+    
+
+    func createAnimalInput() {
+        leftAnimalInputArray = [[DisplayItem<String>]]()
+        rightAnimalInputArray = [[DisplayItem<String>]]()
+        resultArray = [Double]()
+        
+        resultArray = multiplicationTable.calculationResults
+        
+        for leftNumber in multiplicationTable.leftSideNumbers {
+            var tempLeftArray = [DisplayItem<String>]()
+            
+            for _ in 0..<Int(leftNumber) {
+                tempLeftArray.append(animalSelected!)
+            }
+            leftAnimalInputArray.append(contentsOf: [tempLeftArray])
+        }
+        
+        for rightNumber in multiplicationTable.rightSideNumbers {
+            var tempRightArray = [DisplayItem<String>]()
+            
+            for _ in 0..<Int(rightNumber) {
+                tempRightArray.append(animalSelected!)
+            }
+            rightAnimalInputArray.append(contentsOf: [tempRightArray])
+        }
+    }
+
 }

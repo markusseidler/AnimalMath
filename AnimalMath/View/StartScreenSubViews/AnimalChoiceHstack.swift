@@ -16,7 +16,7 @@ struct AnimalChoiceHstack: View {
             ForEach(game.animalArray) { animal in
                 AnimalChoiceView(animalName: animal.content, isTapped: animal.isSelected)
                     .onTapGesture {
-                        self.game.animalSelected(animalName: animal.content)
+                        self.game.selectAnimal(animalName: animal.content)
                 }
             }
             .accessibility(identifier: "AnimalView")

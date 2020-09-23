@@ -9,7 +9,7 @@
 import Foundation
 
  
-struct CalculationTable<DisplayContent> where DisplayContent: Equatable {
+struct CalculationTable<DisplayContent> where DisplayContent: Equatable & Hashable {
     
     // MARK: - Public properties
     

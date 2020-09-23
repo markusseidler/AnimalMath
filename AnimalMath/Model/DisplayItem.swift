@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct DisplayItem<DisplayContent>: Identifiable, Equatable {
+struct DisplayItem<DisplayContent>: Identifiable, Equatable, Hashable where DisplayContent: Hashable {
     static func == (lhs: DisplayItem<DisplayContent>, rhs: DisplayItem<DisplayContent>) -> Bool {
         lhs.id == rhs.id
     }
