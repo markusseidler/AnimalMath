@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ColorChoiceHstack: View {
-    @ObservedObject var game = MultiplicationGame()
+    @EnvironmentObject var game: MultiplicationGame
     
     var body: some View {
         HStack(spacing: 10) {

@@ -131,8 +131,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "MultiplicationGame"
             landmarkType = "3">
          </BreakpointContent>
@@ -147,8 +147,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "MultiplicationGame"
             landmarkType = "3">
          </BreakpointContent>
@@ -163,8 +163,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
             landmarkName = "MultiplicationGame"
             landmarkType = "3">
          </BreakpointContent>
@@ -179,8 +179,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
             landmarkName = "MultiplicationGame"
             landmarkType = "3">
          </BreakpointContent>
@@ -195,8 +195,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "MultiplicationGame"
             landmarkType = "3">
          </BreakpointContent>
@@ -211,8 +211,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "getInputAndOutput()"
             landmarkType = "7">
          </BreakpointContent>
@@ -227,8 +227,8 @@
             filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "85"
-            endingLineNumber = "85"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "getInputAndOutput()"
             landmarkType = "7">
          </BreakpointContent>
@@ -243,8 +243,8 @@
             filePath = "AnimalMath/View/GameView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -279,6 +279,70 @@
                   offsetFromSymbolStart = "204">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4FDEB8B-628C-4AB4-AE14-1B324CA1674A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "startGame()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E4FDEB8B-628C-4AB4-AE14-1B324CA1674A - 29c20e913a639e4d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "AnimalMath.MultiplicationGame.startGame() -&gt; ()"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/ViewModel/MultiplicationGame.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76"
+                  offsetFromSymbolStart = "570">
+               </Location>
+               <Location
+                  uuid = "E4FDEB8B-628C-4AB4-AE14-1B324CA1674A - 8a343c377e99481d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Double, Swift.Double) -&gt; Swift.Double in AnimalMath.MultiplicationGame.startGame() -&gt; ()"
+                  moduleName = "AnimalMath"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/markus/Desktop/PracticeProjects/AnimalMath/AnimalMath/ViewModel/MultiplicationGame.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6B7639D-E819-45DE-A114-DD844E60CD29"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnimalMath/ViewModel/MultiplicationGame.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "startGame()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

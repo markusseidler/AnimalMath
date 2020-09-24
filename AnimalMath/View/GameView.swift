@@ -22,10 +22,13 @@ struct GameView: View {
     // MARK: - View Constants
     
 //    static let columnSpacing: CGFloat = 10.0
-    static let gridSpacing: CGFloat = 5.0
-    static let gridPadding: CGFloat = 0.0
+    static let gridSpacing: CGFloat = 8.0
     static let gridItemMinSize: CGFloat = 30
     static let gridItemMaxSize: CGFloat = 1000
+    
+    var themeColor: Color {
+        game.selectedColor?.color ?? Color.white
+    }
     
     var rows = [
         GridItem(.adaptive(minimum: gridItemMinSize, maximum: gridItemMaxSize), alignment: .center),
@@ -35,45 +38,53 @@ struct GameView: View {
     
     var body: some View {
         
-        VStack {
-            QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
-                .padding()
+        ZStack{
+            RadialGradient(gradient: Gradient(colors: [themeColor, .white]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
+                .edgesIgnoringSafeArea(.all)
             
-            if let leftInputArray = game.calculationInput["left"] {
-                LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-                    ForEach(leftInputArray) { input in
-                        Image(input.content)
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+            VStack {
+                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
+                    .padding()
+                
+                if let leftInputArray = game.calculationInput["left"] {
+                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+                        ForEach(leftInputArray) { input in
+                            Image(input.content)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
                     }
                 }
-            }
-            
-            Text(QuestionLabels.multiplied.rawValue)
-                .padding()
-            
-            if let rightInputArray = game.calculationInput["right"] {
-                LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-                    ForEach(rightInputArray) { input in
-                        Image(input.content).resizable().aspectRatio(contentMode: .fit)
+                
+                Text(QuestionLabels.multiplied.rawValue)
+                    .padding()
+                
+                if let rightInputArray = game.calculationInput["right"] {
+                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+                        ForEach(rightInputArray) { input in
+                            Image(input.content).resizable().aspectRatio(contentMode: .fit)
+                        }
                     }
                 }
+                
+                Text("Score")
+                
+                Spacer()
+                
             }
-            
-            Text("Score")
-            
-            Spacer()
-            
-        }.onAppear(perform: schauMaMal)
+        
+        }
         
     }
     
-    func schauMaMal() {
-        print("left array: \n \(game.calculationInput["left"]?.count)" ?? "links ist leer")
-        print("right array: \n \(game.calculationInput["right"]?.count)" ?? "rechts ist leer")
-//        print("alles array: \n \(game.calculationInput)" ?? "alles ist leer")
-    }
 }
+    
+//    func schauMaMal() {
+//        print("left array: \n \(game.calculationInput["left"]?.count)" ?? "links ist leer")
+//        print("right array: \n \(game.calculationInput["right"]?.count)" ?? "rechts ist leer")
+////        print("alles array: \n \(game.calculationInput)" ?? "alles ist leer")
+//    }
+//}
 
 @available(iOS 14.0, *)
 struct GameView_Previews: PreviewProvider {

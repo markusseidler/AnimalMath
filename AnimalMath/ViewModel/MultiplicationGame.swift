@@ -6,6 +6,11 @@
 //  Copyright © 2020 Mata. All rights reserved.
 //
 
+// issue with the STATE!!!!
+// need to not recall a new model!!!
+// but how to access the number of questions and the max
+
+
 import Foundation
 
 class MultiplicationGame: ObservableObject {
@@ -71,11 +76,20 @@ class MultiplicationGame: ObservableObject {
     }
     
     func startGame() {
-        multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
-            left * right
-        })
+        print("pre: ", selectedColor)
+        guard let favColor = selectedColor else { return }
+//        multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
+//            left * right
+//        })
+        print(multiplicationTable.colorArray)
+        print(selectedColor)
+        print(favColor)
+//        multiplicationTable.colorTapped(color: favColor)
+        print(multiplicationTable.colorSelected)
+        print(multiplicationTable.colorArray)
         selectAnimal(animalName: animalNameTapped)
         createAnimalInput()
+        
         
     }
     

@@ -32,7 +32,8 @@ struct StartView: View {
     var body: some View {
          NavigationView {
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 1000)
+//                LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
@@ -41,7 +42,7 @@ struct StartView: View {
                     Group {
                         QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
                         
-                        ColorChoiceHstack(game: game)
+                        ColorChoiceHstack()
                             .padding(.bottom, viewPadding)
                     }
                     Group {
@@ -101,6 +102,19 @@ struct StartView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        StartView()
+        let game = MultiplicationGame()
+        let startView = StartView()
+        
+        let iPhone11 = "iPhone 11"
+        let iPhone8 = "iPhone 8"
+        let iPadAir = "iPad Air (4th generation)"
+        
+        
+        return Group {
+            startView.environmentObject(game).previewDevice( PreviewDevice(rawValue: iPhone11)).previewDisplayName(iPhone11)
+            startView.environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhone8)).previewDisplayName(iPhone8)
+            startView.environmentObject(game).previewDevice(PreviewDevice(rawValue: iPadAir)).previewDisplayName(iPadAir)
+
+        }
     }
 }
