@@ -53,7 +53,7 @@ class MultiplicationGame: ObservableObject {
     
     @Published private var multiplicationTable: CalculationTable<String>
     
-    private var animalNameTapped: String = ""
+    private var animalNameTapped: String = "panda"
     private var leftAnimalInputArray = [[DisplayItem<String>]]()
     private var rightAnimalInputArray = [[DisplayItem<String>]]()
     private var resultArray = [Double]()
@@ -98,7 +98,8 @@ class MultiplicationGame: ObservableObject {
             var tempLeftArray = [DisplayItem<String>]()
             
             for _ in 0..<Int(leftNumber) {
-                tempLeftArray.append(animalSelected!)
+                tempLeftArray.append(DisplayItem<String>(content: animalNameTapped))
+//                tempLeftArray.append(animalSelected!)
             }
             leftAnimalInputArray.append(contentsOf: [tempLeftArray])
         }
@@ -107,7 +108,8 @@ class MultiplicationGame: ObservableObject {
             var tempRightArray = [DisplayItem<String>]()
             
             for _ in 0..<Int(rightNumber) {
-                tempRightArray.append(animalSelected!)
+                tempRightArray.append(DisplayItem<String>(content: animalNameTapped))
+//                tempRightArray.append(animalSelected!)
             }
             rightAnimalInputArray.append(contentsOf: [tempRightArray])
         }
