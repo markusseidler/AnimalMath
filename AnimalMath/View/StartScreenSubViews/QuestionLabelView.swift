@@ -29,7 +29,8 @@ struct QuestionLabelView: View {
         VStack {
             Text(QuestionHeader.rawValue)
                 .font(.headline)
-                .padding()
+                .padding(.bottom, 3)
+                .padding(.top, 8)
             Text(QuestionCaption?.rawValue ?? "")
                 .font(.caption)
         }

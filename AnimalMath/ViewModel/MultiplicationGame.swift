@@ -22,11 +22,11 @@ class MultiplicationGame: ObservableObject {
     var highestNumber: Int = 6
 
     var colorArray: [FavoriteColor] {
-        multiplicationTable.colorArray
+        colorModel.colorArray
     }
     
     var selectedColor: FavoriteColor? {
-        multiplicationTable.colorSelected
+        colorModel.colorSelected
     }
     
     var animalArray: [DisplayItem<String>] {
@@ -50,6 +50,8 @@ class MultiplicationGame: ObservableObject {
            multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
                left * right
            })
+        
+        colorModel = ColorModel()
            
        }
     
@@ -57,6 +59,7 @@ class MultiplicationGame: ObservableObject {
     // MARK: - Private Properties
     
     @Published private var multiplicationTable: CalculationTable<String>
+    @Published private var colorModel: ColorModel
     
     private var animalNameTapped: String = "panda"
     private var leftAnimalInputArray = [[DisplayItem<String>]]()
@@ -67,7 +70,7 @@ class MultiplicationGame: ObservableObject {
     // MARK: - Public Methods - User Intent
     
     func colorSelected(color: FavoriteColor) {
-        multiplicationTable.colorTapped(color: color)
+        colorModel.colorTapped(color: color)
     }
     
     func selectAnimal(animalName: String) {
@@ -76,17 +79,19 @@ class MultiplicationGame: ObservableObject {
     }
     
     func startGame() {
-        print("pre: ", selectedColor)
-        guard let favColor = selectedColor else { return }
+//        print("pre: ", selectedColor)
+//        guard let favColor = selectedColor else { return }
+        
+        
 //        multiplicationTable = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: MultiplicationGame.animalNames, operation: { (left, right) -> Double in
 //            left * right
 //        })
-        print(multiplicationTable.colorArray)
-        print(selectedColor)
-        print(favColor)
+//        print(multiplicationTable.colorArray)
+//        print(selectedColor)
+//        print(favColor)
 //        multiplicationTable.colorTapped(color: favColor)
-        print(multiplicationTable.colorSelected)
-        print(multiplicationTable.colorArray)
+//        print(multiplicationTable.colorSelected)
+//        print(multiplicationTable.colorArray)
         selectAnimal(animalName: animalNameTapped)
         createAnimalInput()
         

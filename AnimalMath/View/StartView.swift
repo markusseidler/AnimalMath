@@ -27,7 +27,7 @@ struct StartView: View {
     // MARK: - View Constants
     let cornerRadius: CGFloat = 20
     let paddingLeadingTrailing: CGFloat = 20
-    let viewPadding: CGFloat = 5
+    let viewPadding: CGFloat = 3
     
     var body: some View {
          NavigationView {
@@ -107,12 +107,14 @@ struct ContentView_Previews: PreviewProvider {
         
         let iPhone11 = "iPhone 11"
         let iPhone8 = "iPhone 8"
+        let iPhoneSE = "iPhone SE (2nd generation)"
         let iPadAir = "iPad Air (4th generation)"
         
         
         return Group {
             startView.environmentObject(game).previewDevice( PreviewDevice(rawValue: iPhone11)).previewDisplayName(iPhone11)
             startView.environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhone8)).previewDisplayName(iPhone8)
+//            startView.environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhoneSE)).previewDisplayName(iPhoneSE)
             startView.environmentObject(game).previewDevice(PreviewDevice(rawValue: iPadAir)).previewDisplayName(iPadAir)
 
         }
