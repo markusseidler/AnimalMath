@@ -13,7 +13,7 @@ struct AnimalChoiceHstack: View {
     @StateObject var game: CalculationGame
     
     var body: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: 4) {
             ForEach(game.animalArray) { animal in
                 AnimalChoiceView(animalName: animal.content, isTapped: animal.isSelected)
                     .onTapGesture {

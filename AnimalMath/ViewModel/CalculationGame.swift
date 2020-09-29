@@ -51,7 +51,16 @@ class CalculationGame: ObservableObject {
     
     
     func startGame() {
+        if animalSelected == nil {
+            selectAnimal(animalName: "panda")
+        }
         calculationGame = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: animalArray, operation: calculationType.asFunction)
     }
     
+}
+
+struct CalculationGame_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
 }

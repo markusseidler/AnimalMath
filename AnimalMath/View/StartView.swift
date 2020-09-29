@@ -18,6 +18,7 @@ struct StartView: View {
 //    @ObservedObject var game = MultiplicationGame()
 //    @EnvironmentObject var game: MultiplicationGame
     @StateObject var game = CalculationGame()
+    
     @State private var stepperTest: Int = 6
     @State private var showGameView = false
     
@@ -29,7 +30,7 @@ struct StartView: View {
     // MARK: - View Constants
     let cornerRadius: CGFloat = 20
     let paddingLeadingTrailing: CGFloat = 20
-    let viewPadding: CGFloat = 3
+    let viewPadding: CGFloat = -1
     
     var body: some View {
          NavigationView {
@@ -46,6 +47,17 @@ struct StartView: View {
                         
                         ColorChoiceHstack(game: game)
                             .padding(.bottom, viewPadding)
+                    }
+                    Group {
+                        QuestionLabelView(QuestionHeader: .whichCalculationType, QuestionCaption: .calculationType)
+                        Picker(selection: $game.calculationType, label: Text("")){
+                            ForEach(CalculationTypes.allCases, id: \.self) { typeString in Text("\(typeString.rawValue)")
+                            }
+                        }
+                        .pickerStyle(SegmentedPickerStyle())
+                        .padding(.leading, paddingLeadingTrailing)
+                        .padding(.trailing, paddingLeadingTrailing)
+                        .padding(.bottom, viewPadding)
                     }
                     Group {
                         QuestionLabelView(QuestionHeader: .favoriteAnimal, QuestionCaption: .chooseAndTap)

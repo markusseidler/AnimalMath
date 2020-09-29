@@ -42,6 +42,8 @@ struct GameView: View {
             RadialGradient(gradient: Gradient(colors: [themeColor, .white]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
                 .edgesIgnoringSafeArea(.all)
             
+//            Text("\(game.highestNumber), \(game.maxNumber.rawValue), \(game.animalSelected?.content ?? ""), \(game.calculationType.rawValue)").foregroundColor(game.selectedColor?.color)
+            
 //            VStack {
 //                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
 //                    .padding()

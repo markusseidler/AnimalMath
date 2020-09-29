@@ -13,7 +13,7 @@ struct AnimalModel {
         DisplayItem<String>(content: "cow"),
         DisplayItem<String>(content: "elephant"),
         DisplayItem<String>(content: "chick"),
-        DisplayItem<String>(content: "panda", isSelected: true),
+        DisplayItem<String>(content: "panda", isSelected: false),
         DisplayItem<String>(content: "dog"),
         DisplayItem<String>(content: "pig")
     ]

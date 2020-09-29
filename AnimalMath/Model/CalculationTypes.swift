@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum CalculationTypes {
-    case addition
+enum CalculationTypes: String, CaseIterable {
+    case addition = "Addition"
 //    case division
-    case multiplication
-    case subtraction
+    case multiplication = "Multiplication"
+    case subtraction = "Subtraction"
     
     var asFunction: (Double, Double) -> Double {
         switch self {

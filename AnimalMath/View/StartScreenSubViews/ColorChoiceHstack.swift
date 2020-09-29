@@ -14,7 +14,7 @@ struct ColorChoiceHstack: View {
     @StateObject var game: CalculationGame
     
     var body: some View {
-        HStack(spacing: 5) {
+        HStack(spacing: 4) {
             ForEach(game.colorArray) { favColor in
                 ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
                     .onTapGesture {

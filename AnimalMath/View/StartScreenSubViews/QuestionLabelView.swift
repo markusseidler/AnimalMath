@@ -16,6 +16,8 @@ enum QuestionLabels: String {
     case chooseAndTap = "Choose and tap"
     case chooseAndStep = "Choose and step"
     case amountOfQuestions = "Amount of Questions"
+    case whichCalculationType = "What should we play?"
+    case calculationType = "Calculation Type"
     
     case howMuchIs = "How much is?"
     case multiplied = "multiplied by"
@@ -29,8 +31,8 @@ struct QuestionLabelView: View {
         VStack {
             Text(QuestionHeader.rawValue)
                 .font(.headline)
-                .padding(.bottom, 3)
-                .padding(.top, 8)
+                .padding(.bottom, 1)
+                .padding(.top, 5)
             Text(QuestionCaption?.rawValue ?? "")
                 .font(.caption)
         }
