@@ -17,7 +17,7 @@ import SwiftUI
 @available(iOS 14.0, *)
 struct GameView: View {
     
-    @EnvironmentObject var game: MultiplicationGame
+    @StateObject var game: CalculationGame
     
     // MARK: - View Constants
     
@@ -42,36 +42,36 @@ struct GameView: View {
             RadialGradient(gradient: Gradient(colors: [themeColor, .white]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
                 .edgesIgnoringSafeArea(.all)
             
-            VStack {
-                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
-                    .padding()
-                
-                if let leftInputArray = game.calculationInput["left"] {
-                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-                        ForEach(leftInputArray) { input in
-                            Image(input.content)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                        }
-                    }
-                }
-                
-                Text(QuestionLabels.multiplied.rawValue)
-                    .padding()
-                
-                if let rightInputArray = game.calculationInput["right"] {
-                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-                        ForEach(rightInputArray) { input in
-                            Image(input.content).resizable().aspectRatio(contentMode: .fit)
-                        }
-                    }
-                }
-                
-                Text("Score")
-                
-                Spacer()
-                
-            }
+//            VStack {
+//                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
+//                    .padding()
+//
+//                if let leftInputArray = game.calculationInput["left"] {
+//                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+//                        ForEach(leftInputArray) { input in
+//                            Image(input.content)
+//                                .resizable()
+//                                .aspectRatio(contentMode: .fit)
+//                        }
+//                    }
+//                }
+//
+//                Text(QuestionLabels.multiplied.rawValue)
+//                    .padding()
+//
+//                if let rightInputArray = game.calculationInput["right"] {
+//                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+//                        ForEach(rightInputArray) { input in
+//                            Image(input.content).resizable().aspectRatio(contentMode: .fit)
+//                        }
+//                    }
+//                }
+//
+//                Text("Score")
+//
+//                Spacer()
+//
+//            }
         
         }
         
@@ -86,39 +86,39 @@ struct GameView: View {
 //    }
 //}
 
-@available(iOS 14.0, *)
-struct GameView_Previews: PreviewProvider {
-
-
-    static var previews: some View {
-        
-        let game = MultiplicationGame()
-        let animalName = "chick"
-        let amountItems = 12
-        
-        let iPhone11 = "iPhone 11"
-        let iPhone8 = "iPhone 8"
-        let iPadAir = "iPad Air (4th generation)"
-        
-        game.calculationInput["left"] = addItems(amount: amountItems, animalName: animalName)
-        game.calculationInput["right"] = addItems(amount: amountItems, animalName: animalName)
-
-        return Group {
-            GameView().environmentObject(game).previewDevice( PreviewDevice(rawValue: iPhone11)).previewDisplayName(iPhone11)
-            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhone8)).previewDisplayName(iPhone8)
-            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPadAir)).previewDisplayName(iPadAir)
-
-        }
-    }
-    
-    static func addItems(amount: Int, animalName: String) -> [DisplayItem<String>] {
-        var arrayInput = [DisplayItem<String>]()
-        
-        for _ in 0..<amount{
-            arrayInput.append(DisplayItem<String>(content: animalName))
-        }
-    
-        
-        return arrayInput
-    }
-}
+//@available(iOS 14.0, *)
+//struct GameView_Previews: PreviewProvider {
+//
+//
+//    static var previews: some View {
+//        
+//        let game = CalculationGame()
+//        let animalName = "chick"
+//        let amountItems = 12
+//        
+//        let iPhone11 = "iPhone 11"
+//        let iPhone8 = "iPhone 8"
+//        let iPadAir = "iPad Air (4th generation)"
+//        
+//        game.calculationInput["left"] = addItems(amount: amountItems, animalName: animalName)
+//        game.calculationInput["right"] = addItems(amount: amountItems, animalName: animalName)
+//
+//        return Group {
+//            GameView().environmentObject(game).previewDevice( PreviewDevice(rawValue: iPhone11)).previewDisplayName(iPhone11)
+//            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhone8)).previewDisplayName(iPhone8)
+//            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPadAir)).previewDisplayName(iPadAir)
+//
+//        }
+//    }
+//    
+//    static func addItems(amount: Int, animalName: String) -> [DisplayItem<String>] {
+//        var arrayInput = [DisplayItem<String>]()
+//        
+//        for _ in 0..<amount{
+//            arrayInput.append(DisplayItem<String>(content: animalName))
+//        }
+//    
+//        
+//        return arrayInput
+//    }
+//}

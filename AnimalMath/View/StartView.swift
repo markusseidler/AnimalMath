@@ -10,12 +10,14 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct StartView: View {
     
     // MARK: - View Variables
     
 //    @ObservedObject var game = MultiplicationGame()
-    @EnvironmentObject var game: MultiplicationGame
+//    @EnvironmentObject var game: MultiplicationGame
+    @StateObject var game = CalculationGame()
     @State private var stepperTest: Int = 6
     @State private var showGameView = false
     
@@ -42,7 +44,7 @@ struct StartView: View {
                     Group {
                         QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
                         
-                        ColorChoiceHstack()
+                        ColorChoiceHstack(game: game)
                             .padding(.bottom, viewPadding)
                     }
                     Group {
@@ -68,18 +70,14 @@ struct StartView: View {
                     }
                     Spacer()
                     
-                    if #available(iOS 14.0, *) {
-                        NavigationLink(
-                            destination: GameView(),
-                            isActive: $showGameView) {
-                            
-                            
-                            StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
-                                .padding(.bottom, paddingLeadingTrailing)
-                            
-                        }
-                    } else {
-                        // Fallback on earlier versions
+                    NavigationLink(
+                        destination: GameView(game: game),
+                        isActive: $showGameView) {
+                        
+                        
+                        StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                            .padding(.bottom, paddingLeadingTrailing)
+                        
                     }
                 }
             }
@@ -92,22 +90,23 @@ struct StartView: View {
         game.highestNumber = stepperTest
         game.startGame()
         showGameView = true
-        game.createAnimalInput()
-        game.getInputAndOutput()
+//        game.createAnimalInput()
+//        game.getInputAndOutput()
         
     }
     
     
 }
 
+@available(iOS 14.0, *)
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let game = MultiplicationGame()
+        let game = CalculationGame()
         let startView = StartView()
         
         let iPhone11 = "iPhone 11"
         let iPhone8 = "iPhone 8"
-        let iPhoneSE = "iPhone SE (2nd generation)"
+//        let iPhoneSE = "iPhone SE (2nd generation)"
         let iPadAir = "iPad Air (4th generation)"
         
         

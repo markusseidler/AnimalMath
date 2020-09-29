@@ -16,7 +16,7 @@ struct ColorChoiceView: View {
     var body: some View {
         Circle()
             .fill(color)
-            .frame(width: circleSize, height: circleSize)
+            .frame(width: circleSize, height: circleSize).padding(8)
             .overlay(Circle().stroke(Color.black, lineWidth: isTapped ? lineWidthWhenTapped : 0))
     }
     

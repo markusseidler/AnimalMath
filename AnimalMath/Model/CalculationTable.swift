@@ -45,15 +45,17 @@ struct CalculationTable<DisplayContent> where DisplayContent: Equatable & Hashab
         self.highestCalculationInput * self.highestCalculationInput
     }
     
-    init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, displayContentArray: [DisplayContent], operation: (Double, Double) -> Double) {
+    init(numberOfQuestionsEnum: NumberOfQuestionsSet, highestNumber: Int, displayContentArray: [DisplayItem<DisplayContent>], operation: (Double, Double) -> Double) {
         self.highestCalculationInput = highestNumber
         self.allPotentialInputs = [Int](1...self.highestCalculationInput)
         self.numberOfQuestions = numberOfQuestionsEnum.asInteger
         self.selectRandomInputsAndCalculateResults(operation: operation)
         
-        for content in displayContentArray {
-            self.displayItems.append(DisplayItem(content: content))
-        }
+        self.displayItems = displayContentArray
+        
+//        for content in displayContentArray {
+//            self.displayItems.append(DisplayItem(content: content))
+//        }
     }
     
     // MARK: - Private properties

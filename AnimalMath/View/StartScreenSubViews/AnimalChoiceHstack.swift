@@ -8,8 +8,9 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct AnimalChoiceHstack: View {
-    @ObservedObject var game = MultiplicationGame()
+    @StateObject var game: CalculationGame
     
     var body: some View {
         HStack(spacing: 5) {

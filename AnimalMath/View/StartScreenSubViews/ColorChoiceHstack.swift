@@ -8,16 +8,17 @@
 
 import SwiftUI
 
+@available(iOS 14.0, *)
 struct ColorChoiceHstack: View {
 //    @EnvironmentObject var game: MultiplicationGame
-    @ObservedObject var game = MultiplicationGame()
+    @StateObject var game: CalculationGame
     
     var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 5) {
             ForEach(game.colorArray) { favColor in
                 ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
                     .onTapGesture {
-                        self.game.colorSelected(color: favColor)
+                        self.game.selectColor(color: favColor)
                 }.accessibility(identifier: "ColorView")
                 
             }
