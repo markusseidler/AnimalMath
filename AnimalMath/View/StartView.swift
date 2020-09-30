@@ -101,10 +101,8 @@ struct StartView: View {
     private func startGameButtonTapped() {
         game.highestNumber = stepperTest
         game.startGame()
+        game.getInputAndOutputArray()
         showGameView = true
-//        game.createAnimalInput()
-//        game.getInputAndOutput()
-        
     }
     
     

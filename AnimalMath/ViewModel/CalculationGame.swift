@@ -42,6 +42,8 @@ class CalculationGame: ObservableObject {
     private var leftAnimalInputArray = [[DisplayItem<String>]]()
     private var rightAnimalInputArray = [[DisplayItem<String>]]()
     private var resultArray = [Double]()
+    
+    private let animalDefault = "panda"
 
 
     // MARK: - Public methods, User Intent
@@ -56,10 +58,20 @@ class CalculationGame: ObservableObject {
     
     func startGame() {
         if animalSelected == nil {
-            selectAnimal(animalName: "panda")
+            selectAnimal(animalName: animalDefault)
         }
         calculationGame = CalculationTable(numberOfQuestionsEnum: maxNumber, highestNumber: highestNumber, displayContentArray: animalArray, operation: calculationType.asFunction)
+        
+        createAnimalInput()
     }
+    
+    func getInputAndOutputArray() {
+        createAnimalInput()
+        calculationInput["left"] = leftAnimalInputArray.remove(at: 0)
+        calculationInput["right"] = rightAnimalInputArray.remove(at: 0)
+        calculationOutput = resultArray.remove(at: 0)
+    }
+    
     
     // MARK: - Private methods
     
@@ -74,55 +86,24 @@ class CalculationGame: ObservableObject {
         guard let rightSideNumbers = calculationGame?.rightSideNumbers else { return }
         
         resultArray = results
-        for leftNumber in leftSideNumbers {
-            
-        }
-        
+        leftAnimalInputArray = loopingThroughInputArray(numberInputArray: leftSideNumbers)
+        rightAnimalInputArray = loopingThroughInputArray(numberInputArray: rightSideNumbers)
         
     }
     
-    // TODO: implement this... and then work on gameview...
-    
-    
-//    func getInputAndOutput() {
-   //        calculationInput["left"] = leftAnimalInputArray.remove(at: 0)
-   //        calculationInput["right"] = rightAnimalInputArray.remove(at: 0)
-   //        calculationOutput = resultArray.remove(at: 0)
-   ////        print(calculationInput)
-   //    }
-   //
-   //
-   //    func createAnimalInput() {
-   //        leftAnimalInputArray = [[DisplayItem<String>]]()
-   //        rightAnimalInputArray = [[DisplayItem<String>]]()
-   //        resultArray = [Double]()
-   //
-   //        resultArray = multiplicationTable.calculationResults
-   //
-   //        for leftNumber in multiplicationTable.leftSideNumbers {
-   //            var tempLeftArray = [DisplayItem<String>]()
-   //
-   //            for _ in 0..<Int(leftNumber) {
-   //                tempLeftArray.append(DisplayItem<String>(content: animalNameTapped))
-   ////                tempLeftArray.append(animalSelected!)
-   //            }
-   //            leftAnimalInputArray.append(contentsOf: [tempLeftArray])
-   //        }
-   //
-   //        for rightNumber in multiplicationTable.rightSideNumbers {
-   //            var tempRightArray = [DisplayItem<String>]()
-   //
-   //            for _ in 0..<Int(rightNumber) {
-   //                tempRightArray.append(DisplayItem<String>(content: animalNameTapped))
-   ////                tempRightArray.append(animalSelected!)
-   //            }
-   //            rightAnimalInputArray.append(contentsOf: [tempRightArray])
-   //        }
-   //    }
-   //
-    
-    
-    
+    private func loopingThroughInputArray(numberInputArray: [Double]) -> [[DisplayItem<String>]] {
+        var contentInputArray = [[DisplayItem<String>]]()
+        for number in numberInputArray {
+            var tempArray = [DisplayItem<String>]()
+            for _ in 0..<Int(number) {
+                tempArray.append(DisplayItem<String>(content: animalSelected?.content ?? animalDefault))
+            }
+            
+            contentInputArray.append(tempArray)
+        }
+        
+        return contentInputArray
+    }
 }
 
 struct CalculationGame_Previews: PreviewProvider {

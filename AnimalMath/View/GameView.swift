@@ -39,41 +39,39 @@ struct GameView: View {
     var body: some View {
         
         ZStack{
-            RadialGradient(gradient: Gradient(colors: [themeColor, .white]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
+            RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
                 .edgesIgnoringSafeArea(.all)
             
-//            Text("\(game.highestNumber), \(game.maxNumber.rawValue), \(game.animalSelected?.content ?? ""), \(game.calculationType.rawValue)").foregroundColor(game.selectedColor?.color)
-            
-//            VStack {
-//                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
-//                    .padding()
-//
-//                if let leftInputArray = game.calculationInput["left"] {
-//                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-//                        ForEach(leftInputArray) { input in
-//                            Image(input.content)
-//                                .resizable()
-//                                .aspectRatio(contentMode: .fit)
-//                        }
-//                    }
-//                }
-//
-//                Text(QuestionLabels.multiplied.rawValue)
-//                    .padding()
-//
-//                if let rightInputArray = game.calculationInput["right"] {
-//                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
-//                        ForEach(rightInputArray) { input in
-//                            Image(input.content).resizable().aspectRatio(contentMode: .fit)
-//                        }
-//                    }
-//                }
-//
-//                Text("Score")
-//
-//                Spacer()
-//
-//            }
+            VStack {
+                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
+                    .padding()
+
+                if let leftInputArray = game.calculationInput["left"] {
+                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+                        ForEach(leftInputArray) { input in
+                            Image(input.content)
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                        }
+                    }
+                }
+
+                Text(QuestionLabels.multiplied.rawValue)
+                    .padding()
+
+                if let rightInputArray = game.calculationInput["right"] {
+                    LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
+                        ForEach(rightInputArray) { input in
+                            Image(input.content).resizable().aspectRatio(contentMode: .fit)
+                        }
+                    }
+                }
+
+                Text("Score")
+
+                Spacer()
+
+            }
         
         }
         
@@ -124,3 +122,16 @@ struct GameView: View {
 //        return arrayInput
 //    }
 //}
+
+struct GameView_Previews: PreviewProvider {
+    
+    // how to inject a color???
+    
+    static var previews: some View {
+        let game = CalculationGame()
+        let colorModel = ColorModel()
+        game.selectColor(color: colorModel.colorArray.first!)       
+        print(colorModel.colorArray)
+        return GameView(game: game)
+    }
+}

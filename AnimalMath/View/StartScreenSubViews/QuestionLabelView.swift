@@ -35,6 +35,7 @@ struct QuestionLabelView: View {
                 .padding(.top, 5)
             Text(QuestionCaption?.rawValue ?? "")
                 .font(.caption)
+                .opacity(0.60)
         }
     }
 }
