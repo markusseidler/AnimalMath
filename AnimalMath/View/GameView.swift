@@ -13,11 +13,30 @@ import SwiftUI
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
 
 
+// TODO: - Create Score Field and then check of results and continue Game loop and check labels.. in field with rounded rectangles, change accentcolor for backbutton and change text muliplied with switch statement
+
 
 @available(iOS 14.0, *)
 struct GameView: View {
     
+    // MARK: - View Variables
+    
     @StateObject var game: CalculationGame
+    @State var signed: String = "+"
+    @State var digitOne: Int = 0
+    @State var digitTwo: Int = 0
+    @State var digitThree: Int = 0
+    
+    private var selectedNumber: Int {
+        let selection: Int
+        selection = digitOne * 100 + digitTwo * 10 + digitThree
+        if signed == "-" {
+            return (selection * -1)
+        } else {
+            return selection
+        }
+    }
+    
     
     // MARK: - View Constants
     
@@ -25,6 +44,8 @@ struct GameView: View {
     static let gridSpacing: CGFloat = 8.0
     static let gridItemMinSize: CGFloat = 30
     static let gridItemMaxSize: CGFloat = 1000
+    
+    let cornerRadius: CGFloat = 50
     
     var themeColor: Color {
         game.selectedColor?.color ?? Color.white
@@ -39,7 +60,7 @@ struct GameView: View {
     var body: some View {
         
         ZStack{
-            RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 5, endRadius: 500)
+            RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: 100, endRadius: 600)
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
@@ -67,9 +88,18 @@ struct GameView: View {
                     }
                 }
 
-                Text("Score")
+                VStack(spacing: 0) {
+                    Text("Your guess")
+                    
+                    HStack(spacing: 30) {
+                        ResultPickerView(signed: $signed, digitOne: $digitOne, digitTwo: $digitTwo, digitThree: $digitThree)
+                        
+                        SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                    }
+                }.padding(.top, 30)
 
-                Spacer()
+                
+                Text("\(selectedNumber)")
 
             }
         
@@ -77,61 +107,23 @@ struct GameView: View {
         
     }
     
-}
+    private func submitButtonPressed() {
+        print("pressed")
+    }
     
-//    func schauMaMal() {
-//        print("left array: \n \(game.calculationInput["left"]?.count)" ?? "links ist leer")
-//        print("right array: \n \(game.calculationInput["right"]?.count)" ?? "rechts ist leer")
-////        print("alles array: \n \(game.calculationInput)" ?? "alles ist leer")
-//    }
-//}
-
-//@available(iOS 14.0, *)
-//struct GameView_Previews: PreviewProvider {
-//
-//
-//    static var previews: some View {
-//        
-//        let game = CalculationGame()
-//        let animalName = "chick"
-//        let amountItems = 12
-//        
-//        let iPhone11 = "iPhone 11"
-//        let iPhone8 = "iPhone 8"
-//        let iPadAir = "iPad Air (4th generation)"
-//        
-//        game.calculationInput["left"] = addItems(amount: amountItems, animalName: animalName)
-//        game.calculationInput["right"] = addItems(amount: amountItems, animalName: animalName)
-//
-//        return Group {
-//            GameView().environmentObject(game).previewDevice( PreviewDevice(rawValue: iPhone11)).previewDisplayName(iPhone11)
-//            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPhone8)).previewDisplayName(iPhone8)
-//            GameView().environmentObject(game).previewDevice(PreviewDevice(rawValue: iPadAir)).previewDisplayName(iPadAir)
-//
-//        }
-//    }
-//    
-//    static func addItems(amount: Int, animalName: String) -> [DisplayItem<String>] {
-//        var arrayInput = [DisplayItem<String>]()
-//        
-//        for _ in 0..<amount{
-//            arrayInput.append(DisplayItem<String>(content: animalName))
-//        }
-//    
-//        
-//        return arrayInput
-//    }
-//}
-
+}
+ 
 struct GameView_Previews: PreviewProvider {
     
-    // how to inject a color???
     
     static var previews: some View {
         let game = CalculationGame()
-        let colorModel = ColorModel()
-        game.selectColor(color: colorModel.colorArray.first!)       
-        print(colorModel.colorArray)
+
+        game.startGame()
+        game.getInputAndOutputArray()
+        
+        
+        game.selectColor(color: game.colorArray.first!)
         return GameView(game: game)
     }
 }

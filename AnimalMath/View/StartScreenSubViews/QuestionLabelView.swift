@@ -21,6 +21,8 @@ enum QuestionLabels: String {
     
     case howMuchIs = "How much is?"
     case multiplied = "multiplied by"
+    case added = "added with"
+    case subtracted = "minus"
 }
 
 struct QuestionLabelView: View {
