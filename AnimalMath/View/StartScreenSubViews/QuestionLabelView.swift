@@ -23,6 +23,7 @@ enum QuestionLabels: String {
     case multiplied = "multiplied by"
     case added = "added with"
     case subtracted = "minus"
+    case yourGuess = "Your guess"
 }
 
 struct QuestionLabelView: View {

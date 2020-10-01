@@ -29,17 +29,4 @@ enum NumberOfQuestionsSet: String, CaseIterable {
             return 88888888
         }
     }
-    
-//    var asString: String {
-//        switch self {
-//        case .five:
-//            return "Five"
-//        case .ten:
-//            return "Ten"
-//        case .twenty:
-//            return "Twenty"
-//        case .all:
-//            return "All"
-//        }
-//    }
 }

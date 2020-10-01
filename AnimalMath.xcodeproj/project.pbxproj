@@ -28,6 +28,8 @@
 		2886367625236EA200D1BAD5 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2886367525236EA200D1BAD5 /* AnimalModel.swift */; };
 		288B811C2522FE4900F56BB8 /* CalculationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B811B2522FE4900F56BB8 /* CalculationTypes.swift */; };
 		28BFC0712524CC8200220BEB /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC0702524CC8200220BEB /* SubmitButton.swift */; };
+		28D67C8425259AB4007ECFA4 /* ScoreLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */; };
+		28D67C8925259CEF007ECFA4 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D67C8825259CEF007ECFA4 /* QuestionView.swift */; };
 		28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B582511D0FA00E96553 /* CalculationTable.swift */; };
 		28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */; };
 		28DA74D62522F6C00009EE97 /* CalculationGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DA74D52522F6C00009EE97 /* CalculationGame.swift */; };
@@ -82,6 +84,8 @@
 		2886367525236EA200D1BAD5 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		288B811B2522FE4900F56BB8 /* CalculationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTypes.swift; sourceTree = "<group>"; };
 		28BFC0702524CC8200220BEB /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
+		28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelView.swift; sourceTree = "<group>"; };
+		28D67C8825259CEF007ECFA4 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		28D80B582511D0FA00E96553 /* CalculationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTable.swift; sourceTree = "<group>"; };
 		28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOfQuestionsSet.swift; sourceTree = "<group>"; };
 		28DA74D52522F6C00009EE97 /* CalculationGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationGame.swift; sourceTree = "<group>"; };
@@ -217,6 +221,8 @@
 			children = (
 				28DDE69E2524B51B00DE8334 /* ResultPickerView.swift */,
 				28BFC0702524CC8200220BEB /* SubmitButton.swift */,
+				28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */,
+				28D67C8825259CEF007ECFA4 /* QuestionView.swift */,
 			);
 			name = GameViewSubViews;
 			sourceTree = "<group>";
@@ -377,12 +383,14 @@
 				2886367625236EA200D1BAD5 /* AnimalModel.swift in Sources */,
 				28FE0B7C2519C1A000D78C42 /* GameView.swift in Sources */,
 				281F1D5C2518E1000035C825 /* ColorChoiceHstack.swift in Sources */,
+				28D67C8425259AB4007ECFA4 /* ScoreLabelView.swift in Sources */,
 				288257682518ECC6001FDA21 /* StartGameButton.swift in Sources */,
 				281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */,
 				281F1D5E2518E1720035C825 /* AnimalChoiceHstack.swift in Sources */,
 				28DDE69F2524B51B00DE8334 /* ResultPickerView.swift in Sources */,
 				287C364425161F4900DD49AC /* AnimalChoiceView.swift in Sources */,
 				28855913251247FB000813CA /* Color+NewColors.swift in Sources */,
+				28D67C8925259CEF007ECFA4 /* QuestionView.swift in Sources */,
 				288B811C2522FE4900F56BB8 /* CalculationTypes.swift in Sources */,
 				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,

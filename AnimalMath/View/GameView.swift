@@ -13,7 +13,7 @@ import SwiftUI
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
 
 
-// TODO: - Create Score Field and then check of results and continue Game loop and check labels.. in field with rounded rectangles, change accentcolor for backbutton and change text muliplied with switch statement
+// TODO: - Create Score Field and then check of results and continue Game loop and check labels.. in field with rounded rectangles, change accentcolor for backbutton and change text muliplied with switch statement.... launch screen with title AnimalMath for one second? with color checkin launch screen...
 
 
 @available(iOS 14.0, *)
@@ -26,6 +26,8 @@ struct GameView: View {
     @State var digitOne: Int = 0
     @State var digitTwo: Int = 0
     @State var digitThree: Int = 0
+    
+    @State var score: Int = 0
     
     private var selectedNumber: Int {
         let selection: Int
@@ -64,8 +66,11 @@ struct GameView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                QuestionLabelView(QuestionHeader: .howMuchIs, QuestionCaption: nil)
-                    .padding()
+                ScoreLabelView(themeColor: themeColor, score: score)
+                
+                QuestionView(themeColor: themeColor, label: .howMuchIs, coloredLabel: true)
+                    .padding(.bottom, 5)
+    
 
                 if let leftInputArray = game.calculationInput["left"] {
                     LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
@@ -77,8 +82,9 @@ struct GameView: View {
                     }
                 }
 
-                Text(QuestionLabels.multiplied.rawValue)
-                    .padding()
+                QuestionView(themeColor: themeColor, label: .multiplied, coloredLabel: false)
+                    .padding(.bottom, 5)
+    
 
                 if let rightInputArray = game.calculationInput["right"] {
                     LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
@@ -89,22 +95,22 @@ struct GameView: View {
                 }
 
                 VStack(spacing: 0) {
-                    Text("Your guess")
+                    QuestionView(themeColor: themeColor, label: .yourGuess, coloredLabel: true)
+                        .padding()
                     
                     HStack(spacing: 30) {
                         ResultPickerView(signed: $signed, digitOne: $digitOne, digitTwo: $digitTwo, digitThree: $digitThree)
                         
                         SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
                     }
-                }.padding(.top, 30)
-
+                }
+                .padding(.bottom, 30)
                 
-                Text("\(selectedNumber)")
-
+                
             }
-        
-        }
-        
+           
+        }.navigationBarHidden(true)
+
     }
     
     private func submitButtonPressed() {

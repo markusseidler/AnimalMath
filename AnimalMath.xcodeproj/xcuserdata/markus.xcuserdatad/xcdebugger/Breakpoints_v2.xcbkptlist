@@ -35,8 +35,8 @@
             filePath = "AnimalMath/Model/CalculationTable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
             landmarkName = "displayItemSelected"
             landmarkType = "24">
             <Locations>
@@ -83,8 +83,8 @@
             filePath = "AnimalMath/Model/CalculationTable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "displayItemTapped(of:)"
             landmarkType = "7">
             <Locations>
@@ -243,8 +243,8 @@
             filePath = "AnimalMath/View/GameView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "body"
             landmarkType = "24">
             <Locations>
@@ -368,8 +368,8 @@
             filePath = "AnimalMath/View/GameView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "previews"
             landmarkType = "24">
          </BreakpointContent>
