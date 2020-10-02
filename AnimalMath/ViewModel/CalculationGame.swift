@@ -24,6 +24,14 @@ class CalculationGame: ObservableObject {
     var calculationType: CalculationTypes
     var calculationInput = [String : [DisplayItem<String>]]()
     var calculationOutput: Double?
+    var questionsLeft: Int {
+        resultArray.count
+    }
+    var questionsSeen: Int {
+        questionsOriginallySelected - questionsLeft
+    }
+    
+    var questionsOriginallySelected: Int = 0
     
     init() {
         self.colorModel = ColorModel()
@@ -66,7 +74,6 @@ class CalculationGame: ObservableObject {
     }
     
     func getInputAndOutputArray() {
-        createAnimalInput()
         calculationInput["left"] = leftAnimalInputArray.remove(at: 0)
         calculationInput["right"] = rightAnimalInputArray.remove(at: 0)
         calculationOutput = resultArray.remove(at: 0)
@@ -91,6 +98,7 @@ class CalculationGame: ObservableObject {
         guard let rightSideNumbers = calculationGame?.rightSideNumbers else { return }
         
         resultArray = results
+        questionsOriginallySelected = results.count
         leftAnimalInputArray = loopingThroughInputArray(numberInputArray: leftSideNumbers)
         rightAnimalInputArray = loopingThroughInputArray(numberInputArray: rightSideNumbers)
         

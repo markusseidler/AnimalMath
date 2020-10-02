@@ -75,7 +75,11 @@ struct GameView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
-                ScoreLabelView(themeColor: themeColor, score: score)
+                HStack {
+                    QuestionsCountView(themeColor: themeColor, questionsSeen: game.questionsSeen, questionsTotal: game.questionsOriginallySelected)
+                    ScoreLabelView(themeColor: themeColor, score: score)
+                    
+                }
                 
                 QuestionView(themeColor: themeColor, label: .howMuchIs, coloredLabel: true)
                     .padding(.bottom, 5)
@@ -154,6 +158,17 @@ struct GameView: View {
         activeAlert = .resultReplyAlert
         guessIsCorrect = selectedNumber == game.calculationOutput
         presentAlert = true
+        if guessIsCorrect {
+            score += 1
+        } else {
+            score -= 1
+        }
+        if game.questionsLeft != 0 {
+            game.getInputAndOutputArray()
+        } else {
+            // need to start showing modal view for finishing game1
+            // mit pokal???
+        }
     }
 
     

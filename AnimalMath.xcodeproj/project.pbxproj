@@ -22,6 +22,7 @@
 		283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 283EB6A025160247004AB1F0 /* scratchPaper.rtf */; };
 		283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283EB6A225160274004AB1F0 /* FavoriteColor.swift */; };
 		2851906B25220155000B8562 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851906A25220155000B8562 /* ColorModel.swift */; };
+		28571ADA252717F4004A08AA /* QuestionsCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28571AD9252717F4004A08AA /* QuestionsCountView.swift */; };
 		287C364425161F4900DD49AC /* AnimalChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C364325161F4900DD49AC /* AnimalChoiceView.swift */; };
 		287C36462516253900DD49AC /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C36452516253900DD49AC /* DisplayItem.swift */; };
 		288257662518EC12001FDA21 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288257652518EC12001FDA21 /* StartView.swift */; };
@@ -81,6 +82,7 @@
 		283EB6A025160247004AB1F0 /* scratchPaper.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = scratchPaper.rtf; sourceTree = "<group>"; };
 		283EB6A225160274004AB1F0 /* FavoriteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteColor.swift; sourceTree = "<group>"; };
 		2851906A25220155000B8562 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
+		28571AD9252717F4004A08AA /* QuestionsCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCountView.swift; sourceTree = "<group>"; };
 		287C364325161F4900DD49AC /* AnimalChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoiceView.swift; sourceTree = "<group>"; };
 		287C36452516253900DD49AC /* DisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItem.swift; sourceTree = "<group>"; };
 		288257652518EC12001FDA21 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 				28DDE69E2524B51B00DE8334 /* ResultPickerView.swift */,
 				28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */,
 				28BFC0702524CC8200220BEB /* SubmitButton.swift */,
+				28571AD9252717F4004A08AA /* QuestionsCountView.swift */,
 			);
 			name = GameViewSubViews;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				2805B8AA2526F9FF00500178 /* UnsecureReply.swift in Sources */,
 				288B811C2522FE4900F56BB8 /* CalculationTypes.swift in Sources */,
 				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
+				28571ADA252717F4004A08AA /* QuestionsCountView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
 				28FE0B6B2519BA6000D78C42 /* StartLabelView.swift in Sources */,
 				28DA74D62522F6C00009EE97 /* CalculationGame.swift in Sources */,
