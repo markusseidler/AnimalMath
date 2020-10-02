@@ -23,7 +23,7 @@ class CalculationGame: ObservableObject {
     
     var calculationType: CalculationTypes
     var calculationInput = [String : [DisplayItem<String>]]()
-    var calculationOutput: Double? 
+    var calculationOutput: Double?
     
     init() {
         self.colorModel = ColorModel()
@@ -70,6 +70,11 @@ class CalculationGame: ObservableObject {
         calculationInput["left"] = leftAnimalInputArray.remove(at: 0)
         calculationInput["right"] = rightAnimalInputArray.remove(at: 0)
         calculationOutput = resultArray.remove(at: 0)
+    }
+    
+    func showUnsecureMessage() -> Bool {
+        let randomBool = RandomBool()
+        return randomBool.boolResult
     }
     
     

@@ -17,17 +17,26 @@ import SwiftUI
 
 
 @available(iOS 14.0, *)
+
+enum ActiveAlert {
+    case unsecureReplyAlert, resultReplyAlert
+}
+
 struct GameView: View {
     
     // MARK: - View Variables
     
     @StateObject var game: CalculationGame
-    @State var signed: String = "+"
-    @State var digitOne: Int = 0
-    @State var digitTwo: Int = 0
-    @State var digitThree: Int = 0
+    @State private var signed: String = "+"
+    @State private var digitOne: Int = 0
+    @State private var digitTwo: Int = 0
+    @State private var digitThree: Int = 0
     
-    @State var score: Int = 0
+    @State private var score: Int = 0
+    
+    @State private var presentAlert: Bool = false
+    @State private var activeAlert: ActiveAlert = .unsecureReplyAlert
+    @State private var guessIsCorrect: Bool = false
     
     private var selectedNumber: Double {
         let selection: Double
@@ -113,22 +122,40 @@ struct GameView: View {
             }
            
         }
-
+        .alert(isPresented: $presentAlert) {
+            switch activeAlert {
+            case .unsecureReplyAlert:
+                return Alert(title: Text("Wait!"), message: Text(UnsecureReply().reply), primaryButton: .destructive(Text("Still submit")) {
+                                DispatchQueue.main.async {
+                                    submitResult()}},
+                             secondaryButton: .cancel())
+            case .resultReplyAlert:
+                return Alert(title: Text("\(guessIsCorrect ? "Correct!" : "Wrong")"), message: Text(ResultReply(resultCorrect: guessIsCorrect).reply), dismissButton: .default(Text("Next question")))
+            }
+        }
         .navigationBarTitle("Animal Math", displayMode: .inline)
         .navigationBarHidden(false)
 
     }
     
     private func submitButtonPressed() {
-        print("pressed")
-        if selectedNumber == game.calculationOutput {
-            print("it is correct")
+        
+        if game.showUnsecureMessage() {
+            activeAlert = .unsecureReplyAlert
+            presentAlert = true
         } else {
-            print("not correct")
+            activeAlert = .resultReplyAlert
+            submitResult()
         }
     }
     
-   
+    private func submitResult() {
+        presentAlert = false
+        activeAlert = .resultReplyAlert
+        guessIsCorrect = selectedNumber == game.calculationOutput
+        presentAlert = true
+    }
+
     
 }
  

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2805B89A2526F15000500178 /* ResultReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805B8992526F15000500178 /* ResultReply.swift */; };
+		2805B8AA2526F9FF00500178 /* UnsecureReply.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805B8A92526F9FF00500178 /* UnsecureReply.swift */; };
+		2805B8B22526FD2300500178 /* RandomBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2805B8B12526FD2300500178 /* RandomBool.swift */; };
 		281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C42510EF2800C13B1E /* AppDelegate.swift */; };
 		281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00C62510EF2800C13B1E /* SceneDelegate.swift */; };
 		281C00CB2510EF2900C13B1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 281C00CA2510EF2900C13B1E /* Assets.xcassets */; };
@@ -57,6 +60,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2805B8992526F15000500178 /* ResultReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultReply.swift; sourceTree = "<group>"; };
+		2805B8A92526F9FF00500178 /* UnsecureReply.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsecureReply.swift; sourceTree = "<group>"; };
+		2805B8B12526FD2300500178 /* RandomBool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBool.swift; sourceTree = "<group>"; };
 		281C00C12510EF2800C13B1E /* AnimalMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimalMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		281C00C42510EF2800C13B1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		281C00C62510EF2800C13B1E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +126,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2805B8B62526FF7900500178 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				288257652518EC12001FDA21 /* StartView.swift */,
+				28FE0B7B2519C1A000D78C42 /* GameView.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
 		281C00B82510EF2800C13B1E = {
 			isa = PBXGroup;
 			children = (
@@ -143,16 +158,16 @@
 		281C00C32510EF2800C13B1E /* AnimalMath */ = {
 			isa = PBXGroup;
 			children = (
-				281C00F42510F09600C13B1E /* Model */,
-				281C00F52510F0C300C13B1E /* ViewModel */,
-				281C00F62510F0CB00C13B1E /* View */,
 				281C00C42510EF2800C13B1E /* AppDelegate.swift */,
-				281C00C62510EF2800C13B1E /* SceneDelegate.swift */,
 				281C00CA2510EF2900C13B1E /* Assets.xcassets */,
-				281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */,
 				281C00D22510EF2900C13B1E /* Info.plist */,
+				281C00CF2510EF2900C13B1E /* LaunchScreen.storyboard */,
+				281C00F42510F09600C13B1E /* Model */,
 				281C00CC2510EF2900C13B1E /* Preview Content */,
+				281C00C62510EF2800C13B1E /* SceneDelegate.swift */,
 				283EB6A025160247004AB1F0 /* scratchPaper.rtf */,
+				281C00F62510F0CB00C13B1E /* View */,
+				281C00F52510F0C300C13B1E /* ViewModel */,
 			);
 			path = AnimalMath;
 			sourceTree = "<group>";
@@ -187,12 +202,15 @@
 			isa = PBXGroup;
 			children = (
 				2886367525236EA200D1BAD5 /* AnimalModel.swift */,
-				2851906A25220155000B8562 /* ColorModel.swift */,
 				28D80B582511D0FA00E96553 /* CalculationTable.swift */,
-				28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */,
-				283EB6A225160274004AB1F0 /* FavoriteColor.swift */,
-				287C36452516253900DD49AC /* DisplayItem.swift */,
 				288B811B2522FE4900F56BB8 /* CalculationTypes.swift */,
+				2851906A25220155000B8562 /* ColorModel.swift */,
+				287C36452516253900DD49AC /* DisplayItem.swift */,
+				283EB6A225160274004AB1F0 /* FavoriteColor.swift */,
+				28D80B5C2511D95000E96553 /* NumberOfQuestionsSet.swift */,
+				2805B8992526F15000500178 /* ResultReply.swift */,
+				2805B8A92526F9FF00500178 /* UnsecureReply.swift */,
+				2805B8B12526FD2300500178 /* RandomBool.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -208,10 +226,9 @@
 		281C00F62510F0CB00C13B1E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2805B8B62526FF7900500178 /* MainViews */,
 				28DDE69D2524B4FE00DE8334 /* GameViewSubViews */,
 				28FE0B722519BC8500D78C42 /* StartScreenSubViews */,
-				288257652518EC12001FDA21 /* StartView.swift */,
-				28FE0B7B2519C1A000D78C42 /* GameView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -219,10 +236,10 @@
 		28DDE69D2524B4FE00DE8334 /* GameViewSubViews */ = {
 			isa = PBXGroup;
 			children = (
-				28DDE69E2524B51B00DE8334 /* ResultPickerView.swift */,
-				28BFC0702524CC8200220BEB /* SubmitButton.swift */,
-				28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */,
 				28D67C8825259CEF007ECFA4 /* QuestionView.swift */,
+				28DDE69E2524B51B00DE8334 /* ResultPickerView.swift */,
+				28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */,
+				28BFC0702524CC8200220BEB /* SubmitButton.swift */,
 			);
 			name = GameViewSubViews;
 			sourceTree = "<group>";
@@ -230,14 +247,14 @@
 		28FE0B722519BC8500D78C42 /* StartScreenSubViews */ = {
 			isa = PBXGroup;
 			children = (
+				281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */,
+				287C364325161F4900DD49AC /* AnimalChoiceView.swift */,
 				28855912251247FB000813CA /* Color+NewColors.swift */,
+				281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */,
+				288559142512544B000813CA /* ColorChoiceView.swift */,
+				28FE0B732519BCB700D78C42 /* QuestionLabelView.swift */,
 				288257672518ECC6001FDA21 /* StartGameButton.swift */,
 				28FE0B6A2519BA6000D78C42 /* StartLabelView.swift */,
-				281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */,
-				288559142512544B000813CA /* ColorChoiceView.swift */,
-				287C364325161F4900DD49AC /* AnimalChoiceView.swift */,
-				281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */,
-				28FE0B732519BCB700D78C42 /* QuestionLabelView.swift */,
 			);
 			path = StartScreenSubViews;
 			sourceTree = "<group>";
@@ -379,9 +396,11 @@
 				28FE0B742519BCB700D78C42 /* QuestionLabelView.swift in Sources */,
 				28BFC0712524CC8200220BEB /* SubmitButton.swift in Sources */,
 				288257662518EC12001FDA21 /* StartView.swift in Sources */,
+				2805B8B22526FD2300500178 /* RandomBool.swift in Sources */,
 				28D80B5D2511D95000E96553 /* NumberOfQuestionsSet.swift in Sources */,
 				2886367625236EA200D1BAD5 /* AnimalModel.swift in Sources */,
 				28FE0B7C2519C1A000D78C42 /* GameView.swift in Sources */,
+				2805B89A2526F15000500178 /* ResultReply.swift in Sources */,
 				281F1D5C2518E1000035C825 /* ColorChoiceHstack.swift in Sources */,
 				28D67C8425259AB4007ECFA4 /* ScoreLabelView.swift in Sources */,
 				288257682518ECC6001FDA21 /* StartGameButton.swift in Sources */,
@@ -391,6 +410,7 @@
 				287C364425161F4900DD49AC /* AnimalChoiceView.swift in Sources */,
 				28855913251247FB000813CA /* Color+NewColors.swift in Sources */,
 				28D67C8925259CEF007ECFA4 /* QuestionView.swift in Sources */,
+				2805B8AA2526F9FF00500178 /* UnsecureReply.swift in Sources */,
 				288B811C2522FE4900F56BB8 /* CalculationTypes.swift in Sources */,
 				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
