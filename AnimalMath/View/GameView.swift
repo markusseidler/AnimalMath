@@ -29,9 +29,9 @@ struct GameView: View {
     
     @State var score: Int = 0
     
-    private var selectedNumber: Int {
-        let selection: Int
-        selection = digitOne * 100 + digitTwo * 10 + digitThree
+    private var selectedNumber: Double {
+        let selection: Double
+        selection = Double(digitOne * 100 + digitTwo * 10 + digitThree)
         if signed == "-" {
             return (selection * -1)
         } else {
@@ -50,7 +50,7 @@ struct GameView: View {
     let cornerRadius: CGFloat = 50
     
     var themeColor: Color {
-        game.selectedColor?.color ?? Color.white
+        game.selectedColor?.color ?? Color.offwhite
     }
     
     var rows = [
@@ -82,7 +82,7 @@ struct GameView: View {
                     }
                 }
 
-                QuestionView(themeColor: themeColor, label: .multiplied, coloredLabel: false)
+                QuestionView(themeColor: themeColor, label: game.calculationType.asQuestionLabel, coloredLabel: false)
                     .padding(.bottom, 5)
     
 
@@ -98,8 +98,11 @@ struct GameView: View {
                     QuestionView(themeColor: themeColor, label: .yourGuess, coloredLabel: true)
                         .padding()
                     
-                    HStack(spacing: 30) {
+                    HStack(spacing: 10) {
+               
+                        
                         ResultPickerView(signed: $signed, digitOne: $digitOne, digitTwo: $digitTwo, digitThree: $digitThree)
+                            .padding(.horizontal, 10)
                         
                         SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
                     }
@@ -109,13 +112,23 @@ struct GameView: View {
                 
             }
            
-        }.navigationBarHidden(true)
+        }
+
+        .navigationBarTitle("Animal Math", displayMode: .inline)
+        .navigationBarHidden(false)
 
     }
     
     private func submitButtonPressed() {
         print("pressed")
+        if selectedNumber == game.calculationOutput {
+            print("it is correct")
+        } else {
+            print("not correct")
+        }
     }
+    
+   
     
 }
  

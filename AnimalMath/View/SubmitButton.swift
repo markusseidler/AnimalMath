@@ -21,10 +21,10 @@ struct SubmitButton: View {
                     Text("Submit")
                 }
                 .accentColor(accentColorButton)
-                .padding(10)
+                .padding(.horizontal, 11)
+                .padding(.vertical, 6)
                 .background(Color.white)
             .cornerRadius(cornerRadius)
-            
         }
     }
 }

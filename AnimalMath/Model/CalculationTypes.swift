@@ -26,4 +26,16 @@ enum CalculationTypes: String, CaseIterable {
             return {(left, right) -> Double in left - right}
         }
     }
+    
+    var asQuestionLabel: QuestionLabels {
+        switch self {
+        case .addition:
+            return QuestionLabels.added
+        case .multiplication:
+            return QuestionLabels.multiplied
+        case .subtraction:
+            return QuestionLabels.subtracted
+        }
+         
+    }
 }

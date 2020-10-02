@@ -13,6 +13,7 @@ struct QuestionView: View {
     let themeColor: Color
     let cornerRadius: CGFloat
     let coloredLabel: Bool
+    let labelName: QuestionLabels
 
     init(paddingLeadingTrailing: CGFloat = 20, themeColor: Color, cornerRadius: CGFloat = 20, label: QuestionLabels, coloredLabel: Bool) {
         self.paddingLeadingTrailing = paddingLeadingTrailing
@@ -25,9 +26,8 @@ struct QuestionView: View {
     // MARK: - View Constant
     
     let frameWidth: CGFloat = 250.0
-    let frameHeight: CGFloat = 40.0
+    let frameHeight: CGFloat = 30.0
     let opacityRatio: Double = 0.3
-    let labelName: QuestionLabels
     
     var body: some View {
         ZStack{

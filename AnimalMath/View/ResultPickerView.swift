@@ -30,9 +30,7 @@ struct ResultPickerView: View {
                 customizedPicker(selection: digitOne, selectionArray: digitOneArray)
                 customizedPicker(selection: digitTwo, selectionArray: digitTwoArray)
                 customizedPicker(selection: digitThree, selectionArray: digitThreeArray)
-
             }
-        
     }
 
 }

@@ -25,14 +25,14 @@ struct ScoreLabelView: View {
     // MARK: - View Constant
     
     let frameWidth: CGFloat = 250.0
-    let frameHeight: CGFloat = 50.0
+    let frameHeight: CGFloat = 35.0
     let labelName: String
     
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: cornerRadius).fill(themeColor)
             Text(labelName)
-                .font(.largeTitle)
+                .font(.headline)
             
         }.frame(width: frameWidth, height: frameHeight, alignment: .center)
         .padding(.top, paddingLeadingTrailing)
