@@ -84,12 +84,28 @@ class CalculationGame: ObservableObject {
         return randomBool.boolResult
     }
     
+    func scoreRanking(score: Int) -> String {
+        let relativeScore = Double(score / questionsOriginallySelected)
+        
+        switch relativeScore {
+        case ..<0:
+            return ResultImageStrings.weak.rawValue
+        case 0..<0.5:
+            return ResultImageStrings.average.rawValue
+        case 0.5..<0.9:
+            return ResultImageStrings.good.rawValue
+        default:
+            return ResultImageStrings.perfect.rawValue
+        }
+        
+    }
+    
     
     // MARK: - Private methods
     
     private func createAnimalInput() {
         // is this needed? do I need to clean them before use them again?
-//        leftAnimalInputArray = [[DisplayItem<String>]]()
+        //        leftAnimalInputArray = [[DisplayItem<String>]]()
         //        rightAnimalInputArray = [[DisplayItem<String>]]()
         //        resultArray = [Double]()
         

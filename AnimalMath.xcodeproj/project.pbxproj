@@ -19,6 +19,8 @@
 		281C00E72510EF2900C13B1E /* AnimalMathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281C00E62510EF2900C13B1E /* AnimalMathUITests.swift */; };
 		281F1D5C2518E1000035C825 /* ColorChoiceHstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */; };
 		281F1D5E2518E1720035C825 /* AnimalChoiceHstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */; };
+		28259A2C25272DAA00F0B484 /* ResultImageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28259A2B25272DAA00F0B484 /* ResultImageStrings.swift */; };
+		28259A3125272EB800F0B484 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28259A3025272EB800F0B484 /* ResultView.swift */; };
 		283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 283EB6A025160247004AB1F0 /* scratchPaper.rtf */; };
 		283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283EB6A225160274004AB1F0 /* FavoriteColor.swift */; };
 		2851906B25220155000B8562 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851906A25220155000B8562 /* ColorModel.swift */; };
@@ -79,6 +81,8 @@
 		281C00E82510EF2900C13B1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChoiceHstack.swift; sourceTree = "<group>"; };
 		281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoiceHstack.swift; sourceTree = "<group>"; };
+		28259A2B25272DAA00F0B484 /* ResultImageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultImageStrings.swift; sourceTree = "<group>"; };
+		28259A3025272EB800F0B484 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 		283EB6A025160247004AB1F0 /* scratchPaper.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = scratchPaper.rtf; sourceTree = "<group>"; };
 		283EB6A225160274004AB1F0 /* FavoriteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteColor.swift; sourceTree = "<group>"; };
 		2851906A25220155000B8562 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				288257652518EC12001FDA21 /* StartView.swift */,
 				28FE0B7B2519C1A000D78C42 /* GameView.swift */,
+				28259A3025272EB800F0B484 /* ResultView.swift */,
 			);
 			path = MainViews;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 				2805B8992526F15000500178 /* ResultReply.swift */,
 				2805B8A92526F9FF00500178 /* UnsecureReply.swift */,
 				2805B8B12526FD2300500178 /* RandomBool.swift */,
+				28259A2B25272DAA00F0B484 /* ResultImageStrings.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				281F1D5E2518E1720035C825 /* AnimalChoiceHstack.swift in Sources */,
 				28DDE69F2524B51B00DE8334 /* ResultPickerView.swift in Sources */,
 				287C364425161F4900DD49AC /* AnimalChoiceView.swift in Sources */,
+				28259A3125272EB800F0B484 /* ResultView.swift in Sources */,
 				28855913251247FB000813CA /* Color+NewColors.swift in Sources */,
 				28D67C8925259CEF007ECFA4 /* QuestionView.swift in Sources */,
 				2805B8AA2526F9FF00500178 /* UnsecureReply.swift in Sources */,
@@ -418,6 +425,7 @@
 				288559152512544B000813CA /* ColorChoiceView.swift in Sources */,
 				28571ADA252717F4004A08AA /* QuestionsCountView.swift in Sources */,
 				281C00C72510EF2800C13B1E /* SceneDelegate.swift in Sources */,
+				28259A2C25272DAA00F0B484 /* ResultImageStrings.swift in Sources */,
 				28FE0B6B2519BA6000D78C42 /* StartLabelView.swift in Sources */,
 				28DA74D62522F6C00009EE97 /* CalculationGame.swift in Sources */,
 				283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */,

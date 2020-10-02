@@ -13,7 +13,7 @@ import SwiftUI
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
 
 
-// TODO: - Create Score Field and then check of results and continue Game loop and check labels.. in field with rounded rectangles, change accentcolor for backbutton and change text muliplied with switch statement.... launch screen with title AnimalMath for one second? with color checkin launch screen...
+// TODO: - What happen if you dismiss modal view sheet? -> change that it starts new GameView... Create Launch Screen with color selection... create AppIcons... add ANIMATIONS!
 
 
 @available(iOS 14.0, *)
@@ -35,6 +35,7 @@ struct GameView: View {
     @State private var score: Int = 0
     
     @State private var presentAlert: Bool = false
+    @State private var presentSheet: Bool = false
     @State private var activeAlert: ActiveAlert = .unsecureReplyAlert
     @State private var guessIsCorrect: Bool = false
     
@@ -121,8 +122,6 @@ struct GameView: View {
                     }
                 }
                 .padding(.bottom, 30)
-                
-                
             }
            
         }
@@ -134,9 +133,11 @@ struct GameView: View {
                                     submitResult()}},
                              secondaryButton: .cancel())
             case .resultReplyAlert:
-                return Alert(title: Text("\(guessIsCorrect ? "Correct!" : "Wrong")"), message: Text(ResultReply(resultCorrect: guessIsCorrect).reply), dismissButton: .default(Text("Next question")))
+                return Alert(title: Text("\(guessIsCorrect ? "Correct!" : "Wrong")"), message: Text(ResultReply(resultCorrect: guessIsCorrect).reply), dismissButton: .default(Text("Next question"), action: { afterDismissAction() })
+                )
             }
         }
+        .sheet(isPresented: $presentSheet, onDismiss: game.startGame) {ResultView(game: game, imageString: game.scoreRanking(score: score), score: score)}
         .navigationBarTitle("Animal Math", displayMode: .inline)
         .navigationBarHidden(false)
 
@@ -163,11 +164,13 @@ struct GameView: View {
         } else {
             score -= 1
         }
+    }
+    
+    private func afterDismissAction() {
         if game.questionsLeft != 0 {
             game.getInputAndOutputArray()
         } else {
-            // need to start showing modal view for finishing game1
-            // mit pokal???
+            presentSheet = true
         }
     }
 
