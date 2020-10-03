@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var views: Views
     @StateObject var game: CalculationGame
     
     let imageString: String
@@ -32,7 +34,7 @@ struct ResultView: View {
                         }
                         Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         
-                            CustomButton(buttonText: "New Game", buttonSystemImageName: "gamecontroller.fill", accentColor: themeColor, backgroundColor: Color.offwhite, buttonAction: dismissResultViewAction)
+                            CustomButton(buttonText: " New Game ", buttonSystemImageName: "gamecontroller.fill", accentColor: themeColor, backgroundColor: Color.offwhite, buttonAction: dismissResultViewAction)
                                 .padding(.bottom, 40)
                         
                     }
@@ -43,7 +45,8 @@ struct ResultView: View {
     }
     
     func dismissResultViewAction() {
-      print("dismiss")
+        presentationMode.wrappedValue.dismiss()
+        views.naviLinkIsActive = false
     
     }
 }

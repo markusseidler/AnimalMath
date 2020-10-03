@@ -15,8 +15,6 @@ struct StartView: View {
     
     // MARK: - View Variables
     
-//    @ObservedObject var game = MultiplicationGame()
-//    @EnvironmentObject var game: MultiplicationGame
     @StateObject var game: CalculationGame
     
     @State private var stepperTest: Int = 6
@@ -35,17 +33,10 @@ struct StartView: View {
     var body: some View {
             ZStack {
                 RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 1000)
-//                LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
                     Spacer()
-//                    Group {
-//                        QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
-//
-//                        ColorChoiceHstack(game: game)
-//                            .padding(.bottom, viewPadding)
-//                    }
                     Group {
                         QuestionLabelView(QuestionHeader: .whichCalculationType, QuestionCaption: .calculationType)
                         Picker(selection: $game.calculationType, label: Text("")){
@@ -86,10 +77,7 @@ struct StartView: View {
                         
                         CustomButton(buttonText: "Let's play", buttonSystemImageName: "gamecontroller.fill", accentColor: game.selectedColor?.color ?? Color.black, backgroundColor: Color.white, buttonAction: startGameButtonTapped)
                             .padding(.bottom, paddingLeadingTrailing)
-                        
-                        
-//                        StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
-//                            .padding(.bottom, paddingLeadingTrailing)
+  
                         
                     }
                 }

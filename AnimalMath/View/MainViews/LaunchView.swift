@@ -14,8 +14,8 @@ struct LaunchView: View {
     
     @StateObject var game = CalculationGame()
     @StateObject var launchViewVM = LaunchViewVM()
-    
-    @State private var naviLinkActive: Bool = false
+    @StateObject var views = Views()
+
     @State private var nextButtonIsHidden = true
     
     var animalArray: [DisplayItem<String>] {
@@ -83,7 +83,7 @@ struct LaunchView: View {
                     HStack {
                         NavigationLink(
                             destination: StartView(game: game),
-                            isActive: $naviLinkActive,
+                            isActive: self.$views.naviLinkIsActive,
                             label: {EmptyView()})
                         
                         LaunchViewImages(display: animalArray[randomIndex])
@@ -93,16 +93,12 @@ struct LaunchView: View {
                     
                 }
             }.navigationBarHidden(true)
-        }
+        }.environmentObject(views)
     }
     
     func nextButtonAction() {
-        naviLinkActive = true
+        views.naviLinkIsActive = true
     }
-    
-//    func getRandomInt() -> Int {
-//        launchViewVM.randomInt()
-//    }
 }
 
 struct LaunchView_Previews: PreviewProvider {
