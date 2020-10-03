@@ -133,11 +133,11 @@ struct GameView: View {
                                     submitResult()}},
                              secondaryButton: .cancel())
             case .resultReplyAlert:
-                return Alert(title: Text("\(guessIsCorrect ? "Correct!" : "Wrong")"), message: Text(ResultReply(resultCorrect: guessIsCorrect).reply), dismissButton: .default(Text("Next question"), action: { afterDismissAction() })
+                return Alert(title: Text("\(guessIsCorrect ? "Correct!" : "Wrong")"), message: Text(ResultReply(resultCorrect: guessIsCorrect).reply), dismissButton: .default(Text(game.questionsLeft==0 ? "Game over" : "Next question"), action: { afterDismissAction() })
                 )
             }
         }
-        .sheet(isPresented: $presentSheet, onDismiss: game.startGame) {ResultView(game: game, imageString: game.scoreRanking(score: score), score: score)}
+        .sheet(isPresented: $presentSheet) {ResultView(game: game, presentSheet: $presentSheet, imageString: game.scoreRanking(score: score), score: score)}
         .navigationBarTitle("Animal Math", displayMode: .inline)
         .navigationBarHidden(false)
 

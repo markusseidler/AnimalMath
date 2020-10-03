@@ -11,6 +11,8 @@ import SwiftUI
 struct ResultView: View {
     @StateObject var game: CalculationGame
     
+    @Binding var presentSheet: Bool
+    
     let imageString: String
     let score: Int
     
@@ -31,6 +33,7 @@ struct ResultView: View {
                     Text("\(score)").font(.largeTitle)
                     Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     Spacer()
+                    
                 }
                 .foregroundColor(themeColor)
                 
@@ -41,9 +44,13 @@ struct ResultView: View {
 }
 
 struct ResultView_Previews: PreviewProvider {
+    
+    @State static var presentSheet = false
+    
     static var previews: some View {
+        
         let game = CalculationGame()
         game.selectColor(color: game.colorArray.first!)
-        return ResultView(game: game, imageString: "average", score: 10)
+        return ResultView(game: game, presentSheet: $presentSheet, imageString: "average", score: 10)
     }
 }
