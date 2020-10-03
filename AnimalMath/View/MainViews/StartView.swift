@@ -33,7 +33,6 @@ struct StartView: View {
     let viewPadding: CGFloat = 30
     
     var body: some View {
-         NavigationView {
             ZStack {
                 RadialGradient(gradient: Gradient(colors: [.white, themeColor]), center: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/, startRadius: /*@START_MENU_TOKEN@*/5/*@END_MENU_TOKEN@*/, endRadius: 1000)
 //                LinearGradient(gradient: Gradient(colors: [.white, themeColor]), startPoint: .topLeading, endPoint: .bottomTrailing)
@@ -97,7 +96,6 @@ struct StartView: View {
             }
             .navigationBarTitle("New Game")
             .navigationBarHidden(true)
-         }
     }
     
     private func startGameButtonTapped() {

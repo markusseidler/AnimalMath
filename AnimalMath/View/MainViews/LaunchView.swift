@@ -15,6 +15,7 @@ struct LaunchView: View {
     @StateObject var game = CalculationGame()
     @StateObject var launchViewVM = LaunchViewVM()
     
+    @State private var naviLinkActive: Bool = false
     @State private var nextButtonIsHidden = true
     
     var animalArray: [DisplayItem<String>] {
@@ -33,62 +34,70 @@ struct LaunchView: View {
     let viewPadding: CGFloat = -1
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [themeColor, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                .edgesIgnoringSafeArea(.all)
-            VStack {
-                HStack {
-                    LaunchViewImages(display: animalArray[randomIndex])
+        NavigationView {
+            ZStack {
+                LinearGradient(gradient: Gradient(colors: [themeColor, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
+                VStack {
                     Spacer()
-                    LaunchViewImages(display: animalArray[randomIndex])
+                    HStack {
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                    }
+                    HStack {
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        
+                    }
+                    
+                    StartLabelView(themeColor: themeColor, cornerRadius: cornerRadius)
+                        .padding()
+                    HStack {
+                        Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
+                    }
                     Spacer()
-                }
-                HStack {
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    LaunchViewImages(display: animalArray[randomIndex])
+                    Group {
+                        QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
+                            .padding(.top, 10)
+                        
+                        ColorChoiceHstack(game: game, nextButtonIsHidden: $nextButtonIsHidden)
+                            .padding(.bottom, viewPadding).onTapGesture(count: 1, perform: {
+                                print("test")
+                            })
+                    }
+                    Spacer()
+                    HStack {
+                        NavigationLink(
+                            destination: StartView(game: game),
+                            isActive: $naviLinkActive,
+                            label: {EmptyView()})
+                        
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        CustomButton(buttonText: "  Tap here  ", buttonSystemImageName: "arrowshape.turn.up.right.circle.fill", accentColor: themeColor, backgroundColor: Color.white, buttonAction: nextButtonAction).padding(30).hidden(nextButtonIsHidden)
+                        LaunchViewImages(display: animalArray[randomIndex])
+                    }
                     
                 }
-                
-                StartLabelView(themeColor: themeColor, cornerRadius: cornerRadius)
-                    .padding()
-                HStack {
-                    Spacer()
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    Spacer()
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    Spacer()
-                }
-                
-                HStack {
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    Spacer()
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    Spacer()
-                    LaunchViewImages(display: animalArray[randomIndex])
-                }
-                Spacer()
-                Group {
-                    QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
-                        .padding(.top, 10)
-                    
-                    ColorChoiceHstack(game: game, nextButtonIsHidden: $nextButtonIsHidden)
-                        .padding(.bottom, viewPadding).onTapGesture(count: 1, perform: {
-                            print("test")
-                        })
-                }
-                Spacer()
-                HStack {
-                    LaunchViewImages(display: animalArray[randomIndex])
-                    CustomButton(buttonText: " Press here ", buttonSystemImageName: "arrowshape.turn.up.right.circle.fill", accentColor: themeColor, backgroundColor: Color.white, buttonAction: nextButtonAction).padding(30).hidden(nextButtonIsHidden)
-                    LaunchViewImages(display: animalArray[randomIndex])
-                }
-                
-            }
+            }.navigationBarHidden(true)
         }
     }
     
     func nextButtonAction() {
-        print("nx")
+        naviLinkActive = true
     }
     
 //    func getRandomInt() -> Int {
