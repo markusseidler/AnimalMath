@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct StartLabelView: View {
-    let paddingLeadingTrailing: CGFloat
+//    let paddingLeadingTrailing: CGFloat
     let themeColor: Color
     let cornerRadius: CGFloat
     
@@ -27,13 +27,13 @@ struct StartLabelView: View {
                 .font(.largeTitle)
             
         }.frame(width: frameWidth, height: frameHeight, alignment: .center)
-        .padding(.top, paddingLeadingTrailing)
+//        .padding(.top, paddingLeadingTrailing)
     }
     
 }
 
 struct StartViewBackGround_Previews: PreviewProvider {
     static var previews: some View {
-        StartLabelView(paddingLeadingTrailing: 20, themeColor: Color.red, cornerRadius: 20)
+        StartLabelView(themeColor: Color.red, cornerRadius: 20)
     }
 }

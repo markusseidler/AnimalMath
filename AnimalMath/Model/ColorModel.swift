@@ -10,7 +10,7 @@ import Foundation
 
 struct ColorModel {
     var colorArray: [FavoriteColor] = [
-//    FavoriteColor(color: .yellow),
+    FavoriteColor(color: .yellow),
     FavoriteColor(color: .orange),
     FavoriteColor(color: .red),
     FavoriteColor(color: .purple),

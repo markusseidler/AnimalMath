@@ -30,7 +30,7 @@ struct StartView: View {
     // MARK: - View Constants
     let cornerRadius: CGFloat = 20
     let paddingLeadingTrailing: CGFloat = 20
-    let viewPadding: CGFloat = -1
+    let viewPadding: CGFloat = 30
     
     var body: some View {
          NavigationView {
@@ -40,14 +40,13 @@ struct StartView: View {
                     .edgesIgnoringSafeArea(.all)
                 
                 VStack {
-                    StartLabelView(paddingLeadingTrailing: paddingLeadingTrailing, themeColor: themeColor, cornerRadius: cornerRadius)
                     Spacer()
-                    Group {
-                        QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
-                        
-                        ColorChoiceHstack(game: game)
-                            .padding(.bottom, viewPadding)
-                    }
+//                    Group {
+//                        QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
+//
+//                        ColorChoiceHstack(game: game)
+//                            .padding(.bottom, viewPadding)
+//                    }
                     Group {
                         QuestionLabelView(QuestionHeader: .whichCalculationType, QuestionCaption: .calculationType)
                         Picker(selection: $game.calculationType, label: Text("")){

@@ -10,14 +10,15 @@ import SwiftUI
 
 struct LaunchViewImages: View {
     let display: DisplayItem<String>
-    let size: (width: CGFloat, height: CGFloat) = (60, 60)
+    let size: (width: CGFloat, height: CGFloat) = (50, 50)
+    let viewPadding: CGFloat = 5
     
     var body: some View {
         Image(display.content)
             .resizable()
             .aspectRatio(contentMode: .fit)
             .frame(width: size.width, height: size.height, alignment: .center)
-            .padding()
+            .padding(viewPadding)
     }
 }
 
