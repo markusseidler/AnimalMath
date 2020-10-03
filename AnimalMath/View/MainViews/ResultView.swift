@@ -44,8 +44,7 @@ struct ResultView: View {
     
     func dismissResultViewAction() {
       print("dismiss")
-        
-//        showStartView = true
+    
     }
 }
 

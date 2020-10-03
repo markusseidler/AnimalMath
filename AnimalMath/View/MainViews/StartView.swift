@@ -17,7 +17,7 @@ struct StartView: View {
     
 //    @ObservedObject var game = MultiplicationGame()
 //    @EnvironmentObject var game: MultiplicationGame
-    @StateObject var game = CalculationGame()
+    @StateObject var game: CalculationGame
     
     @State private var stepperTest: Int = 6
     @State private var showGameView = false
@@ -115,7 +115,7 @@ struct StartView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         let game = CalculationGame()
-        let startView = StartView()
+        let startView = StartView(game: game)
         
         let iPhone11 = "iPhone 11"
         let iPhone8 = "iPhone 8"
