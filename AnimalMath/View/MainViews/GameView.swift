@@ -118,7 +118,9 @@ struct GameView: View {
                         ResultPickerView(signed: $signed, digitOne: $digitOne, digitTwo: $digitTwo, digitThree: $digitThree)
                             .padding(.horizontal, 10)
                         
-                        SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                        CustomButton(buttonText: "Submit", buttonSystemImageName: "checkmark.circle.fill", accentColor: game.selectedColor?.color ?? Color.black, backgroundColor: Color.white, buttonAction: submitButtonPressed)
+                        
+//                        SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
                     }
                 }
                 .padding(.bottom, 30)
@@ -137,7 +139,7 @@ struct GameView: View {
                 )
             }
         }
-        .sheet(isPresented: $presentSheet) {ResultView(game: game, presentSheet: $presentSheet, imageString: game.scoreRanking(score: score), score: score)}
+        .sheet(isPresented: $presentSheet) {ResultView(game: game, imageString: game.scoreRanking(score: score), score: score)}
         .navigationBarTitle("Animal Math", displayMode: .inline)
         .navigationBarHidden(false)
 

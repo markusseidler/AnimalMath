@@ -11,8 +11,6 @@ import SwiftUI
 struct ResultView: View {
     @StateObject var game: CalculationGame
     
-    @Binding var presentSheet: Bool
-    
     let imageString: String
     let score: Int
     
@@ -21,25 +19,33 @@ struct ResultView: View {
     }
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack{
-                Color.white
-                    .edgesIgnoringSafeArea(.all)
-                VStack {
-                    Text("Game completed!")
-                        .padding().font(.largeTitle)
-                    Text("Your final score is").padding()
-                        .font(.largeTitle)
-                    Text("\(score)").font(.largeTitle)
-                    Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.75, height: geometry.size.height * 0.50, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                    Spacer()
+            GeometryReader { geometry in
+                ZStack{
+                    Color.white
+                        .edgesIgnoringSafeArea(.all)
+                    VStack (spacing: 30) {
+                        Text("Your final score is").padding()
+                            .font(.largeTitle)
+                        ZStack {
+                            Circle().fill(Color.offwhite).frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                            Text("\(score)").font(.largeTitle)
+                        }
+                        Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        
+                            CustomButton(buttonText: "New Game", buttonSystemImageName: "gamecontroller.fill", accentColor: themeColor, backgroundColor: Color.offwhite, buttonAction: dismissResultViewAction)
+                                .padding(.bottom, 40)
+                        
+                    }
+                    .foregroundColor(themeColor)
                     
                 }
-                .foregroundColor(themeColor)
-                
-            }
         }
+    }
+    
+    func dismissResultViewAction() {
+      print("dismiss")
         
+//        showStartView = true
     }
 }
 
@@ -51,6 +57,6 @@ struct ResultView_Previews: PreviewProvider {
         
         let game = CalculationGame()
         game.selectColor(color: game.colorArray.first!)
-        return ResultView(game: game, presentSheet: $presentSheet, imageString: "average", score: 10)
+        return ResultView(game: game, imageString: "average", score: 10)
     }
 }

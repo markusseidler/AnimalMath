@@ -86,9 +86,12 @@ struct StartView: View {
                         destination: GameView(game: game),
                         isActive: $showGameView) {
                         
-                        
-                        StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+                        CustomButton(buttonText: "Let's play", buttonSystemImageName: "gamecontroller.fill", accentColor: game.selectedColor?.color ?? Color.black, backgroundColor: Color.white, buttonAction: startGameButtonTapped)
                             .padding(.bottom, paddingLeadingTrailing)
+                        
+                        
+//                        StartGameButton(buttonAction: startGameButtonTapped, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
+//                            .padding(.bottom, paddingLeadingTrailing)
                         
                     }
                 }

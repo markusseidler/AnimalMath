@@ -47,6 +47,6 @@ struct NewGameButton_Previews: PreviewProvider {
     }
     
     static var previews: some View {
-        CustomButton(buttonText: "New Game", buttonSystemImageName: "gamecontroller.fill", accentColor: Color.red, backgroundColor: Color.white, buttonAction: testAction)
+        CustomButton(buttonText: "New Game", buttonSystemImageName: "gamecontroller.fill", accentColor: Color.red, backgroundColor: Color.offwhite, buttonAction: testAction)
     }
 }

@@ -29,12 +29,10 @@
 		287C364425161F4900DD49AC /* AnimalChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C364325161F4900DD49AC /* AnimalChoiceView.swift */; };
 		287C36462516253900DD49AC /* DisplayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287C36452516253900DD49AC /* DisplayItem.swift */; };
 		288257662518EC12001FDA21 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288257652518EC12001FDA21 /* StartView.swift */; };
-		288257682518ECC6001FDA21 /* StartGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288257672518ECC6001FDA21 /* StartGameButton.swift */; };
 		28855913251247FB000813CA /* Color+NewColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28855912251247FB000813CA /* Color+NewColors.swift */; };
 		288559152512544B000813CA /* ColorChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288559142512544B000813CA /* ColorChoiceView.swift */; };
 		2886367625236EA200D1BAD5 /* AnimalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2886367525236EA200D1BAD5 /* AnimalModel.swift */; };
 		288B811C2522FE4900F56BB8 /* CalculationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 288B811B2522FE4900F56BB8 /* CalculationTypes.swift */; };
-		28BFC0712524CC8200220BEB /* SubmitButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28BFC0702524CC8200220BEB /* SubmitButton.swift */; };
 		28D67C8425259AB4007ECFA4 /* ScoreLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */; };
 		28D67C8925259CEF007ECFA4 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D67C8825259CEF007ECFA4 /* QuestionView.swift */; };
 		28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D80B582511D0FA00E96553 /* CalculationTable.swift */; };
@@ -92,12 +90,10 @@
 		287C364325161F4900DD49AC /* AnimalChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoiceView.swift; sourceTree = "<group>"; };
 		287C36452516253900DD49AC /* DisplayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayItem.swift; sourceTree = "<group>"; };
 		288257652518EC12001FDA21 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
-		288257672518ECC6001FDA21 /* StartGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartGameButton.swift; sourceTree = "<group>"; };
 		28855912251247FB000813CA /* Color+NewColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+NewColors.swift"; sourceTree = "<group>"; };
 		288559142512544B000813CA /* ColorChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChoiceView.swift; sourceTree = "<group>"; };
 		2886367525236EA200D1BAD5 /* AnimalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalModel.swift; sourceTree = "<group>"; };
 		288B811B2522FE4900F56BB8 /* CalculationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTypes.swift; sourceTree = "<group>"; };
-		28BFC0702524CC8200220BEB /* SubmitButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitButton.swift; sourceTree = "<group>"; };
 		28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreLabelView.swift; sourceTree = "<group>"; };
 		28D67C8825259CEF007ECFA4 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		28D80B582511D0FA00E96553 /* CalculationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationTable.swift; sourceTree = "<group>"; };
@@ -137,19 +133,12 @@
 		2805B8B62526FF7900500178 /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				2806E75F2528432700E906A8 /* CustomButton.swift */,
 				288257652518EC12001FDA21 /* StartView.swift */,
 				28FE0B7B2519C1A000D78C42 /* GameView.swift */,
 				28259A3025272EB800F0B484 /* ResultView.swift */,
 			);
 			path = MainViews;
-			sourceTree = "<group>";
-		};
-		2806E75E2528430900E906A8 /* ResultViewSubViews */ = {
-			isa = PBXGroup;
-			children = (
-				2806E75F2528432700E906A8 /* CustomButton.swift */,
-			);
-			path = ResultViewSubViews;
 			sourceTree = "<group>";
 		};
 		281C00B82510EF2800C13B1E = {
@@ -246,7 +235,6 @@
 			children = (
 				28DDE69D2524B4FE00DE8334 /* GameViewSubViews */,
 				2805B8B62526FF7900500178 /* MainViews */,
-				2806E75E2528430900E906A8 /* ResultViewSubViews */,
 				28FE0B722519BC8500D78C42 /* StartScreenSubViews */,
 			);
 			path = View;
@@ -258,7 +246,6 @@
 				28D67C8825259CEF007ECFA4 /* QuestionView.swift */,
 				28DDE69E2524B51B00DE8334 /* ResultPickerView.swift */,
 				28D67C8325259AB4007ECFA4 /* ScoreLabelView.swift */,
-				28BFC0702524CC8200220BEB /* SubmitButton.swift */,
 				28571AD9252717F4004A08AA /* QuestionsCountView.swift */,
 			);
 			name = GameViewSubViews;
@@ -273,7 +260,6 @@
 				281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */,
 				288559142512544B000813CA /* ColorChoiceView.swift */,
 				28FE0B732519BCB700D78C42 /* QuestionLabelView.swift */,
-				288257672518ECC6001FDA21 /* StartGameButton.swift */,
 				28FE0B6A2519BA6000D78C42 /* StartLabelView.swift */,
 			);
 			path = StartScreenSubViews;
@@ -342,7 +328,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Mata;
 				TargetAttributes = {
 					281C00C02510EF2800C13B1E = {
@@ -414,7 +400,6 @@
 				2851906B25220155000B8562 /* ColorModel.swift in Sources */,
 				28D80B592511D0FA00E96553 /* CalculationTable.swift in Sources */,
 				28FE0B742519BCB700D78C42 /* QuestionLabelView.swift in Sources */,
-				28BFC0712524CC8200220BEB /* SubmitButton.swift in Sources */,
 				288257662518EC12001FDA21 /* StartView.swift in Sources */,
 				2806E7602528432700E906A8 /* CustomButton.swift in Sources */,
 				2805B8B22526FD2300500178 /* RandomBool.swift in Sources */,
@@ -424,7 +409,6 @@
 				2805B89A2526F15000500178 /* ResultReply.swift in Sources */,
 				281F1D5C2518E1000035C825 /* ColorChoiceHstack.swift in Sources */,
 				28D67C8425259AB4007ECFA4 /* ScoreLabelView.swift in Sources */,
-				288257682518ECC6001FDA21 /* StartGameButton.swift in Sources */,
 				281C00C52510EF2800C13B1E /* AppDelegate.swift in Sources */,
 				281F1D5E2518E1720035C825 /* AnimalChoiceHstack.swift in Sources */,
 				28DDE69F2524B51B00DE8334 /* ResultPickerView.swift in Sources */,
@@ -514,6 +498,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -574,6 +559,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
