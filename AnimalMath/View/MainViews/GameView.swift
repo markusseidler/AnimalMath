@@ -13,9 +13,6 @@ import SwiftUI
 //https://www.hackingwithswift.com/quick-start/swiftui/how-to-position-views-in-a-grid-using-lazyvgrid-and-lazyhgrid
 
 
-// TODO: - What happen if you dismiss modal view sheet? -> change that it starts new GameView... Create Launch Screen with color selection... create AppIcons... add ANIMATIONS!
-
-
 @available(iOS 14.0, *)
 
 enum ActiveAlert {
@@ -78,14 +75,11 @@ struct GameView: View {
             VStack {
                 HStack {
                     QuestionsCountView(themeColor: themeColor, questionsSeen: game.questionsSeen, questionsTotal: game.questionsOriginallySelected)
-                    ScoreLabelView(themeColor: themeColor, score: score)
-                    
-                }
+                    ScoreLabelView(themeColor: themeColor, score: score)}
                 
                 QuestionView(themeColor: themeColor, label: .howMuchIs, coloredLabel: true)
                     .padding(.bottom, 5)
     
-
                 if let leftInputArray = game.calculationInput["left"] {
                     LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
                         ForEach(leftInputArray) { input in
@@ -94,18 +88,19 @@ struct GameView: View {
                                 .aspectRatio(contentMode: .fit)
                         }
                     }
+                    .animation(.easeInOut(duration: 0.5))
                 }
 
                 QuestionView(themeColor: themeColor, label: game.calculationType.asQuestionLabel, coloredLabel: false)
                     .padding(.bottom, 5)
     
-
                 if let rightInputArray = game.calculationInput["right"] {
                     LazyHGrid(rows: rows, alignment: .center, spacing: GameView.gridSpacing) {
                         ForEach(rightInputArray) { input in
                             Image(input.content).resizable().aspectRatio(contentMode: .fit)
                         }
                     }
+                    .animation(.easeInOut(duration: 0.5))
                 }
 
                 VStack(spacing: 0) {
@@ -119,8 +114,6 @@ struct GameView: View {
                             .padding(.horizontal, 10)
                         
                         CustomButton(buttonText: "Submit", buttonSystemImageName: "checkmark.circle.fill", accentColor: game.selectedColor?.color ?? Color.black, backgroundColor: Color.white, buttonAction: submitButtonPressed)
-                        
-//                        SubmitButton(buttonAction: submitButtonPressed, accentColorButton: game.selectedColor?.color ?? Color.black, cornerRadius: cornerRadius)
                     }
                 }
                 .padding(.bottom, 30)
@@ -140,6 +133,7 @@ struct GameView: View {
             }
         }
         .sheet(isPresented: $presentSheet) {ResultView(game: game, imageString: game.scoreRanking(score: score), score: score)}
+        
         .navigationBarTitle("Animal Math", displayMode: .inline)
         .navigationBarHidden(false)
 
@@ -170,7 +164,7 @@ struct GameView: View {
     
     private func afterDismissAction() {
         if game.questionsLeft != 0 {
-            game.getInputAndOutputArray()
+                game.getInputAndOutputArray()
         } else {
             presentSheet = true
         }

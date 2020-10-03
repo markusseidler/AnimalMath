@@ -47,8 +47,7 @@ struct ResultView: View {
     func dismissResultViewAction() {
         presentationMode.wrappedValue.dismiss()
         views.naviLinkIsActive = false
-    
-    }
+        }
 }
 
 struct ResultView_Previews: PreviewProvider {

@@ -24,8 +24,8 @@ struct StartView: View {
         game.selectedColor?.color ?? Color.offwhite
     }
     
+        // MARK: - View Constants
     
-    // MARK: - View Constants
     let cornerRadius: CGFloat = 20
     let paddingLeadingTrailing: CGFloat = 20
     let viewPadding: CGFloat = 30
@@ -82,8 +82,8 @@ struct StartView: View {
                     }
                 }
             }
-            .navigationBarTitle("New Game")
-            .navigationBarHidden(true)
+            .navigationBarTitle("Game Settings", displayMode: .inline)
+            .navigationBarHidden(false)
     }
     
     private func startGameButtonTapped() {

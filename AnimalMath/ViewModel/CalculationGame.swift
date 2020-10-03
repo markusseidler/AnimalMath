@@ -104,11 +104,7 @@ class CalculationGame: ObservableObject {
     // MARK: - Private methods
     
     private func createAnimalInput() {
-        // is this needed? do I need to clean them before use them again?
-        //        leftAnimalInputArray = [[DisplayItem<String>]]()
-        //        rightAnimalInputArray = [[DisplayItem<String>]]()
-        //        resultArray = [Double]()
-        
+                
         guard let results = calculationGame?.calculationResults else { return }
         guard let leftSideNumbers = calculationGame?.leftSideNumbers else { return }
         guard let rightSideNumbers = calculationGame?.rightSideNumbers else { return }

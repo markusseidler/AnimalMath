@@ -83,8 +83,8 @@
             filePath = "AnimalMath/Model/CalculationTable.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "displayItemTapped(of:)"
             landmarkType = "7">
             <Locations>

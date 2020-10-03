@@ -35,10 +35,6 @@ struct CalculationTable<DisplayContent> where DisplayContent: Equatable & Hashab
         self.selectRandomInputsAndCalculateResults(operation: operation)
         
         self.displayItems = displayContentArray
-        
-//        for content in displayContentArray {
-//            self.displayItems.append(DisplayItem(content: content))
-//        }
     }
     
     // MARK: - Private properties

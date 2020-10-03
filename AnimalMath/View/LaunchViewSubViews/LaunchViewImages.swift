@@ -19,6 +19,7 @@ struct LaunchViewImages: View {
             .aspectRatio(contentMode: .fit)
             .frame(width: size.width, height: size.height, alignment: .center)
             .padding(viewPadding)
+            .hidden(Bool.random())
     }
 }
 

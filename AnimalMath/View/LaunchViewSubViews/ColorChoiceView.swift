@@ -18,6 +18,7 @@ struct ColorChoiceView: View {
             .fill(color)
             .frame(width: circleSize, height: circleSize).padding(8)
             .overlay(Circle().stroke(Color.black, lineWidth: isTapped ? lineWidthWhenTapped : 0))
+            .animation(.linear(duration: 0.1))
     }
     
     // View constants

@@ -21,7 +21,7 @@ struct AnimalChoiceView: View {
         } .frame(width: frameSize, height: frameSize)
     }
     
-    // View constants
+    //MARK: -  View constants
     let frameSize: CGFloat = 55
     let lineWidthWhenTapped: CGFloat = 4
 }

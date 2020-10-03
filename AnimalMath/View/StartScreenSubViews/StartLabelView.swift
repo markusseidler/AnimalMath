@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct StartLabelView: View {
-//    let paddingLeadingTrailing: CGFloat
     let themeColor: Color
     let cornerRadius: CGFloat
     
@@ -19,7 +18,6 @@ struct StartLabelView: View {
     let frameHeight: CGFloat = 50.0
     let labelName = "Animal Math"
     
-    
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: cornerRadius).fill(themeColor)
@@ -27,7 +25,6 @@ struct StartLabelView: View {
                 .font(.largeTitle)
             
         }.frame(width: frameWidth, height: frameHeight, alignment: .center)
-//        .padding(.top, paddingLeadingTrailing)
     }
     
 }

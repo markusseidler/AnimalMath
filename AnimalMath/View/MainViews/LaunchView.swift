@@ -21,8 +21,9 @@ struct LaunchView: View {
     var animalArray: [DisplayItem<String>] {
         launchViewVM.animalModel.animalArray
     }
+    
     var randomIndex: Int {
-        launchViewVM.randomInt()
+            launchViewVM.randomInt()
     }
     
     var themeColor: Color {
@@ -30,6 +31,7 @@ struct LaunchView: View {
     }
     
     // MARK: - View Constants
+    
     let cornerRadius: CGFloat = 20
     let viewPadding: CGFloat = -1
     
@@ -38,16 +40,22 @@ struct LaunchView: View {
             ZStack {
                 LinearGradient(gradient: Gradient(colors: [themeColor, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
                     .edgesIgnoringSafeArea(.all)
+                LinearGradient(gradient: Gradient(colors: [themeColor, Color.white]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
                     HStack {
-                        LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex]).padding(.leading, 20)
                         Spacer()
                         LaunchViewImages(display: animalArray[randomIndex])
                         Spacer()
+                        LaunchViewImages(display: animalArray[randomIndex])
                     }
                     HStack {
                         LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex])
+                        Spacer()
                         LaunchViewImages(display: animalArray[randomIndex])
                         
                     }
@@ -57,6 +65,7 @@ struct LaunchView: View {
                     HStack {
                         Spacer()
                         LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex])
                         Spacer()
                         LaunchViewImages(display: animalArray[randomIndex])
                         Spacer()
@@ -68,6 +77,7 @@ struct LaunchView: View {
                         LaunchViewImages(display: animalArray[randomIndex])
                         Spacer()
                         LaunchViewImages(display: animalArray[randomIndex])
+                        LaunchViewImages(display: animalArray[randomIndex])
                     }
                     Spacer()
                     Group {
@@ -76,8 +86,7 @@ struct LaunchView: View {
                         
                         ColorChoiceHstack(game: game, nextButtonIsHidden: $nextButtonIsHidden)
                             .padding(.bottom, viewPadding).onTapGesture(count: 1, perform: {
-                                print("test")
-                            })
+                                print("test")})
                     }
                     Spacer()
                     HStack {
