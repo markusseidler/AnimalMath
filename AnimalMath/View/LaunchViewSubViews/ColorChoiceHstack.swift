@@ -22,9 +22,8 @@ struct ColorChoiceHstack: View {
                             self.game.selectColor(color: favColor)
                             self.game.selectedColor != nil ? (nextButtonIsHidden = false) : (nextButtonIsHidden = true)
                         }
-                        
-                }.accessibility(identifier: "ColorView")
-                
+                }
+                    .accessibility(identifier: "ColorView")
             }
         }
     }

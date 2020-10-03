@@ -13,6 +13,8 @@ struct ResultView: View {
     @EnvironmentObject var views: Views
     @StateObject var game: CalculationGame
     
+    @State var isRotated: Bool = false
+    
     let imageString: String
     let score: Int
     
@@ -32,6 +34,8 @@ struct ResultView: View {
                             Circle().fill(Color.offwhite).frame(width: 100, height: 100, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                             Text("\(score)").font(.largeTitle)
                         }
+                        .rotation3DEffect(Angle.degrees(isRotated ? 360 : 0), axis: (x: 0, y: 1, z: 0))
+                        
                         Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                         
                             CustomButton(buttonText: " New Game ", buttonSystemImageName: "gamecontroller.fill", accentColor: themeColor, backgroundColor: Color.offwhite, buttonAction: dismissResultViewAction)
@@ -41,13 +45,19 @@ struct ResultView: View {
                     .foregroundColor(themeColor)
                     
                 }
-        }
+            }.onAppear(perform: startRotation)
     }
     
     func dismissResultViewAction() {
         presentationMode.wrappedValue.dismiss()
         views.naviLinkIsActive = false
+    }
+    
+    func startRotation() {
+        withAnimation(.easeInOut(duration: 1.0)) {
+            isRotated.toggle()
         }
+    }
 }
 
 struct ResultView_Previews: PreviewProvider {
