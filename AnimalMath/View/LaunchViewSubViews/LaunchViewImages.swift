@@ -10,8 +10,8 @@ import SwiftUI
 
 struct LaunchViewImages: View {
     let display: DisplayItem<String>
-    let size: (width: CGFloat, height: CGFloat) = (50, 50)
-    let viewPadding: CGFloat = 5
+    let size: (width: CGFloat, height: CGFloat) = (20, 20)
+    let viewPadding: CGFloat = 2
     
     var body: some View {
         Image(display.content)
@@ -20,6 +20,7 @@ struct LaunchViewImages: View {
             .frame(width: size.width, height: size.height, alignment: .center)
             .padding(viewPadding)
             .hidden(Bool.random())
+//            .hidden(false)
     }
 }
 

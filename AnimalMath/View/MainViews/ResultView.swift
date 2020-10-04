@@ -36,7 +36,7 @@ struct ResultView: View {
                         }
                         .rotation3DEffect(Angle.degrees(isRotated ? 360 : 0), axis: (x: 0, y: 1, z: 0))
                         
-                        Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.40, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                        Image(imageString).resizable().aspectRatio(contentMode: .fit).frame(width: geometry.size.width * 0.6, height: geometry.size.height * 0.40, alignment: .center)
                         
                             CustomButton(buttonText: " New Game ", buttonSystemImageName: "gamecontroller.fill", accentColor: themeColor, backgroundColor: Color.offwhite, buttonAction: dismissResultViewAction)
                                 .padding(.bottom, 40)

@@ -14,7 +14,7 @@ struct ColorChoiceHstack: View {
     @Binding var nextButtonIsHidden: Bool
 
     var body: some View {
-        HStack(spacing: -2) {
+        HStack(spacing: -3) {
             ForEach(game.colorArray) { favColor in
                 ColorChoiceView(color: favColor.color, isTapped: favColor.isSelected)
                     .onTapGesture {
@@ -25,6 +25,6 @@ struct ColorChoiceHstack: View {
                 }
                     .accessibility(identifier: "ColorView")
             }
-        }
+        }.padding()
     }
 }

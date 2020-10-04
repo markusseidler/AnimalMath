@@ -34,6 +34,8 @@ struct LaunchView: View {
     
     let cornerRadius: CGFloat = 20
     let viewPadding: CGFloat = -1
+    let hStackSpacing: CGFloat = 3
+    let numberOfLVImages: Int = 13
     
     var body: some View {
         NavigationView {
@@ -44,52 +46,89 @@ struct LaunchView: View {
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
-                    HStack {
-                        LaunchViewImages(display: animalArray[randomIndex]).padding(.leading, 20)
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
+                    Group {
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
                     }
-                    HStack {
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        
-                    }
-                    
-                    StartLabelView(themeColor: themeColor, cornerRadius: cornerRadius)
-                        .padding()
-                    HStack {
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                    }
+        
                     
                     HStack {
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        Spacer()
-                        LaunchViewImages(display: animalArray[randomIndex])
-                        LaunchViewImages(display: animalArray[randomIndex])
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<1) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        StartLabelView(themeColor: themeColor, cornerRadius: cornerRadius)
+                            .padding()
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<1) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
                     }
+                    
                     Spacer()
+                    Group {
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<numberOfLVImages) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
+                    }
+                    
                     Group {
                         QuestionLabelView(QuestionHeader: .favoriteColor, QuestionCaption: .chooseAndTap)
                             .padding(.top, 10)
                         
                         ColorChoiceHstack(game: game, nextButtonIsHidden: $nextButtonIsHidden)
-                            .padding(.bottom, viewPadding).onTapGesture(count: 1, perform: {
-                                print("test")})
+                            .padding(.bottom, viewPadding)
                     }
-                    Spacer()
+                    HStack(spacing: hStackSpacing) {
+                        ForEach (0..<numberOfLVImages) { _ in
+                            LaunchViewImages(display: animalArray[randomIndex])
+                        }
+                    }
+                    
                     HStack {
+                        
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<2) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
                         NavigationLink(
                             destination: StartView(game: game),
                             isActive: self.$views.naviLinkIsActive,
@@ -98,6 +137,12 @@ struct LaunchView: View {
                         LaunchViewImages(display: animalArray[randomIndex])
                         CustomButton(buttonText: "  Tap here  ", buttonSystemImageName: "arrowshape.turn.up.right.circle.fill", accentColor: themeColor, backgroundColor: Color.white, buttonAction: nextButtonAction).padding(30).hidden(nextButtonIsHidden)
                         LaunchViewImages(display: animalArray[randomIndex])
+                        
+                        HStack(spacing: hStackSpacing) {
+                            ForEach (0..<2) { _ in
+                                LaunchViewImages(display: animalArray[randomIndex])
+                            }
+                        }
                     }
                     
                 }
