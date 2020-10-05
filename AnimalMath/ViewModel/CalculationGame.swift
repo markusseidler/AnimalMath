@@ -85,7 +85,7 @@ class CalculationGame: ObservableObject {
     }
     
     func scoreRanking(score: Int) -> String {
-        let relativeScore = Double(score / questionsOriginallySelected)
+        let relativeScore = (Double(score) / Double(questionsOriginallySelected))
         
         switch relativeScore {
         case ..<0:

@@ -27,6 +27,7 @@
 		281F1D5E2518E1720035C825 /* AnimalChoiceHstack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */; };
 		28259A2C25272DAA00F0B484 /* ResultImageStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28259A2B25272DAA00F0B484 /* ResultImageStrings.swift */; };
 		28259A3125272EB800F0B484 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28259A3025272EB800F0B484 /* ResultView.swift */; };
+		2836277B252B53E800E96C64 /* hStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2836277A252B53E800E96C64 /* hStackView.swift */; };
 		283EB6A125160247004AB1F0 /* scratchPaper.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 283EB6A025160247004AB1F0 /* scratchPaper.rtf */; };
 		283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283EB6A225160274004AB1F0 /* FavoriteColor.swift */; };
 		2851906B25220155000B8562 /* ColorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2851906A25220155000B8562 /* ColorModel.swift */; };
@@ -93,6 +94,7 @@
 		281F1D5D2518E1720035C825 /* AnimalChoiceHstack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalChoiceHstack.swift; sourceTree = "<group>"; };
 		28259A2B25272DAA00F0B484 /* ResultImageStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultImageStrings.swift; sourceTree = "<group>"; };
 		28259A3025272EB800F0B484 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		2836277A252B53E800E96C64 /* hStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hStackView.swift; sourceTree = "<group>"; };
 		283EB6A025160247004AB1F0 /* scratchPaper.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = scratchPaper.rtf; sourceTree = "<group>"; };
 		283EB6A225160274004AB1F0 /* FavoriteColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteColor.swift; sourceTree = "<group>"; };
 		2851906A25220155000B8562 /* ColorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorModel.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				281F1D5B2518E1000035C825 /* ColorChoiceHstack.swift */,
 				288559142512544B000813CA /* ColorChoiceView.swift */,
 				280C963A252878D400C5FA4B /* LaunchViewImages.swift */,
+				2836277A252B53E800E96C64 /* hStackView.swift */,
 			);
 			path = LaunchViewSubViews;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				28FE0B6B2519BA6000D78C42 /* StartLabelView.swift in Sources */,
 				28DA74D62522F6C00009EE97 /* CalculationGame.swift in Sources */,
 				283EB6A325160274004AB1F0 /* FavoriteColor.swift in Sources */,
+				2836277B252B53E800E96C64 /* hStackView.swift in Sources */,
 				287C36462516253900DD49AC /* DisplayItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

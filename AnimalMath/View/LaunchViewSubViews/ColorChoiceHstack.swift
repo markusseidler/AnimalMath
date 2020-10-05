@@ -25,6 +25,6 @@ struct ColorChoiceHstack: View {
                 }
                     .accessibility(identifier: "ColorView")
             }
-        }.padding()
+        }.padding(.horizontal, 10)
     }
 }
